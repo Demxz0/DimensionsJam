@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://orwwg1eup5xf"]
+[gd_scene load_steps=4 format=3 uid="uid://ccrqa5tu7x44r"]
 
-[ext_resource type="Texture2D" uid="uid://by24rretp0ce8" path="res://Screenshot 2025-05-18 215744.png" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://dyuwirutxl1dm" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://by24rretp0ce8" path="res://zaid/Screenshot 2025-05-18 215744.png" id="1_06t4h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
@@ -28,7 +27,6 @@ offset_right = 398.23193
 offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7vrkn")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
