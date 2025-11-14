@@ -1,0 +1,131 @@
+[gd_scene load_steps=14 format=3 uid="uid://clujobpgkrdjm"]
+
+[ext_resource type="Script" uid="uid://8l0r3t10lliw" path="res://scripts/dialog_logic.gd" id="1_ppbmj"]
+[ext_resource type="Texture2D" uid="uid://d2n5o16hsyoe0" path="res://assets/sprites/dialog_box.png" id="2_777q1"]
+[ext_resource type="FontFile" uid="uid://byhktyhr414ht" path="res://assets/fonts/kg_midnight_memories/KGMidnightMemories.ttf" id="3_777q1"]
+[ext_resource type="Script" uid="uid://cts5534yqv3d7" path="res://scripts/dialog_box.gd" id="3_yey3j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_777q1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yey3j"]
+bg_color = Color(0.2857812, 0.30650586, 0.1836856, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_size = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_777q1"]
+bg_color = Color(0.52408725, 0.5550142, 0.3684402, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_size = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcqg1"]
+bg_color = Color(0.5254902, 0.5568628, 0.36862746, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_size = 13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yey3j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuboj"]
+bg_color = Color(0.95, 0.8569, 0.83599997, 0.3137255)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqtdb"]
+bg_color = Color(0.94509804, 0.85490197, 0.8352941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psnit"]
+bg_color = Color(0.94509804, 0.85490197, 0.8352941, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7wny"]
+bg_color = Color(0.95, 0.8569, 0.83599997, 0.3137255)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Logic" type="Node2D"]
+script = ExtResource("1_ppbmj")
+
+[node name="Dialog" type="Sprite2D" parent="."]
+position = Vector2(646, 411)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_777q1")
+
+[node name="Name" type="Label" parent="Dialog"]
+offset_left = -1875.0
+offset_top = 304.16687
+offset_right = -1283.3333
+offset_bottom = 452.16687
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("3_777q1")
+theme_override_font_sizes/font_size = 130
+theme_override_styles/focus = SubResource("StyleBoxEmpty_777q1")
+text = "Wife"
+horizontal_alignment = 1
+
+[node name="Script" type="RichTextLabel" parent="Dialog"]
+offset_left = -1837.5
+offset_top = 604.1666
+offset_right = 1837.5
+offset_bottom = 1091.6666
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_777q1")
+theme_override_font_sizes/normal_font_size = 130
+bbcode_enabled = true
+text = "we need to move forward "
+script = ExtResource("3_yey3j")
+
+[node name="ContinueButton" type="Button" parent="Dialog"]
+offset_left = 1458.3335
+offset_top = 962.5001
+offset_right = 1870.8335
+offset_bottom = 1104.1666
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_777q1")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_yey3j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_777q1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dcqg1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yey3j")
+text = "Continue"
+
+[node name="Nextscene" type="Button" parent="."]
+offset_left = 38.0
+offset_top = 57.0
+offset_right = 251.0
+offset_bottom = 122.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_777q1")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_tuboj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hqtdb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_psnit")
+theme_override_styles/focus = SubResource("StyleBoxFlat_t7wny")
+text = "Move To Next Scene"
+
+[connection signal="pressed" from="Dialog/ContinueButton" to="." method="advance_dialogue"]
+[connection signal="pressed" from="Nextscene" to="." method="_on_nextscene_pressed"]

@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://evq4f2bunafb"]
-
-[ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://draggable/scene/draggable.tscn" id="1_akn7w"]
-
-[node name="dragTest" type="Node2D"]
-
-[node name="Draggable" parent="." instance=ExtResource("1_akn7w")]
-position = Vector2(556, 297)

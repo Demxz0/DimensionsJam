@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnvpb7aj22yyf"]
+
+[ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="1_nkjfy"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(485, 324.5)
+scale = Vector2(3.8437498, 3.9453123)
+texture = ExtResource("1_nkjfy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 242.0
+offset_top = 73.0
+offset_right = 732.0
+offset_bottom = 575.0
+mouse_filter = 2

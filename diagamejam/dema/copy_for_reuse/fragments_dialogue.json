@@ -1,0 +1,62 @@
+[
+  {
+	"speaker": "Wife",
+	"text": "Look at this street... it's unrecognisable anymore. we lost everything.",
+	"action": "wife_sad"
+  },
+  {
+	"speaker": "Husband",
+	"text": "I know. Old man Ahmed's cart... our bakery... all gone.",
+	"action": "husband_sad"
+  },
+  {
+	"speaker": "Wife",
+	"text": "I found this in the rubble of what used to be our home. Our picture. A piece of what was ours.",
+	"action": "wife_sad"
+  },
+  {
+	"speaker": "Husband",
+	"text": "It's just fragments...",
+	"action": "husband_idle"
+  },
+  {
+	"speaker": "Wife",
+	"text": "But it's a piece we can rebuild from. A reminder. I won't let it go.",
+	"action": "wife_talking"
+  },
+  {
+	"speaker": "Husband",
+	"text": "You know what. Let me try.",
+	"action": "husband_talking"
+  },
+  {
+	"speaker": "Wife",
+	"text": "How can you fix what's shattered?",
+	"action": "wife_sad"
+  },
+  {
+	"speaker": "Husband",
+	"text": "We won't just fix it. We can reimagine it. Make it better.",
+	"action": "husband_talking"
+  },
+  {
+	"speaker": "Husband",
+	"text": "If we want to live, We start with what's left and build from it.",
+	"action": "husband_idle"
+  },
+  {
+	"speaker": "Wife",
+	"text": "The cracks will still be there... but the picture is will be whole again.",
+	"action": "wife_smiling"
+  },
+  {
+	"speaker": "Husband",
+	"text": "It's a start. Let this remind you that even after everything we lost, we are still here, that's all what we need to restart.",
+	"action": "husband_smiling"
+  },
+  {
+	"speaker": "Wife",
+	"text": "You're right. Tomorrow... we start building our new home.",
+	"action": "wife_smiling"
+  }
+]

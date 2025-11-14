@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn60kup6mnc6n"]
+
+[ext_resource type="Texture2D" uid="uid://cos0rordupdua" path="res://dema/temp_assets/661d18262589732586d2b05f725f1e3b.jpg" id="1_mbt4i"]
+[ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="2_150ti"]
+[ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="3_lg531"]
+[ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="4_nsg31"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1219.0477
+offset_bottom = 685.71436
+scale = Vector2(1.05, 1.05)
+texture = ExtResource("1_mbt4i")
+
+[node name="Node2D" parent="." instance=ExtResource("2_150ti")]
+offset_left = -75.0
+offset_top = 31.0
+offset_right = -75.0
+offset_bottom = 31.0
+
+[node name="Draggable" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("3_lg531")]
+position = Vector2(251, 456)
+containment_zone = NodePath("../Node2D/ColorRect")
+
+[node name="Draggable2" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("3_lg531")]
+position = Vector2(413, 461)
+containment_zone = NodePath("../Node2D/ColorRect")
+
+[node name="Draggable3" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("3_lg531")]
+position = Vector2(554, 446)
+containment_zone = NodePath("../Node2D/ColorRect")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1085.0
+offset_top = 91.0
+offset_right = 1221.0
+offset_bottom = 218.0
+texture_normal = ExtResource("4_nsg31")
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+offset_left = 1091.0
+offset_top = 515.0
+offset_right = 1227.0
+offset_bottom = 643.0
+texture_normal = ExtResource("4_nsg31")
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+offset_left = 1088.0
+offset_top = 305.0
+offset_right = 1224.0
+offset_bottom = 433.0
+texture_normal = ExtResource("4_nsg31")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1086.0
+offset_top = 38.0
+offset_right = 1213.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 30
+text = "passport"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1128.0
+offset_top = 465.0
+offset_right = 1182.0
+offset_bottom = 507.0
+theme_override_font_sizes/font_size = 30
+text = "dog"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1123.0
+offset_top = 250.0
+offset_right = 1178.0
+offset_bottom = 292.0
+theme_override_font_sizes/font_size = 30
+text = "talk"
+
+[editable path="Node2D"]
