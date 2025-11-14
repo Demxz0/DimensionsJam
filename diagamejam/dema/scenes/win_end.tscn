@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpjib1asp4l5i"]
+[gd_scene load_steps=6 format=3 uid="uid://cpjib1asp4l5i"]
 
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="1_ky463"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="1_pivf5"]
 [ext_resource type="Texture2D" uid="uid://bm0g52bixuceh" path="res://assets/sprites/Police.png" id="2_mpftn"]
 [ext_resource type="Texture2D" uid="uid://kgrh1isd0fpg" path="res://assets/sprites/logo.png" id="2_uj0r8"]
+[ext_resource type="AudioStream" uid="uid://b8jibynafjobu" path="res://assets/sfx/international-airport-intercom-madeira-19947.mp3" id="5_uj0r8"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,3 +29,8 @@ scale = Vector2(0.6770841, 0.6515192)
 texture = ExtResource("2_mpftn")
 
 [node name="Logic" parent="." instance=ExtResource("1_pivf5")]
+
+[node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uj0r8")
+autoplay = true
+parameters/looping = false
