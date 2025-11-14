@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bomu3ohbquxci"]
+[gd_scene load_steps=34 format=3 uid="uid://bomu3ohbquxci"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_u2vy7"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_lbeq3"]
@@ -20,6 +20,16 @@
 [ext_resource type="PackedScene" uid="uid://d017i1w7b3ucr" path="res://dema/scenes/passportCharbel.tscn" id="18_3wyau"]
 [ext_resource type="PackedScene" uid="uid://6qf0kwv86das" path="res://dema/scenes/idCharbel.tscn" id="19_0a306"]
 [ext_resource type="PackedScene" uid="uid://dw4oxdxnf5egb" path="res://dema/scenes/dogNotSafe.tscn" id="20_13tjt"]
+[ext_resource type="Texture2D" uid="uid://6kqjxqq3t86i" path="res://assets/sprites/pants/pantsBlue.png" id="21_3ac8m"]
+[ext_resource type="Texture2D" uid="uid://dq3ij5du578xt" path="res://assets/sprites/pants/pantsGrey.png" id="22_w1pf6"]
+[ext_resource type="Texture2D" uid="uid://b0xkhso4dg0ao" path="res://assets/sprites/shirts/shirtGreen.png" id="23_iv7a1"]
+[ext_resource type="Texture2D" uid="uid://0dhpjv31l6gi" path="res://assets/sprites/shirts/shirtGrey.png" id="24_swv4y"]
+[ext_resource type="Texture2D" uid="uid://desqbe7mpiu5q" path="res://assets/sprites/shirts/shirtBlue.png" id="25_kjidc"]
+[ext_resource type="Texture2D" uid="uid://c4kpxbhwyk65c" path="res://assets/sprites/underClothes/underpantsGrey.png" id="26_5esj5"]
+[ext_resource type="Texture2D" uid="uid://du55fj7248jwm" path="res://assets/sprites/underClothes/black socks.png" id="27_p8p3k"]
+[ext_resource type="Texture2D" uid="uid://cuw13iw354cvt" path="res://assets/sprites/underClothes/blueSocks.png" id="28_33p2w"]
+[ext_resource type="Texture2D" uid="uid://brwdfpohbyheg" path="res://assets/sprites/shoes/shoesBlack.png" id="29_ond4r"]
+[ext_resource type="Texture2D" uid="uid://qsu0id31e3u7" path="res://assets/sprites/shoes/shoesWhite.png" id="30_b5nah"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g4v4"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -230,6 +240,7 @@ position = Vector2(-1, 2)
 [node name="Node2D5" parent="." instance=ExtResource("13_frjr1")]
 visible = false
 z_index = 1
+script = null
 
 [node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_xew35")
@@ -239,14 +250,69 @@ parameters/looping = false
 [node name="Node2D" parent="." instance=ExtResource("18_3wyau")]
 visible = false
 z_index = 1
+script = null
 
 [node name="Node2D2" parent="." instance=ExtResource("19_0a306")]
 visible = false
 z_index = 1
+script = null
 
 [node name="Node2D3" parent="." instance=ExtResource("20_13tjt")]
 visible = false
 z_index = 1
+script = null
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+position = Vector2(174, 527)
+scale = Vector2(0.45715833, 0.45715836)
+texture = ExtResource("21_3ac8m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node"]
+position = Vector2(285, 524)
+scale = Vector2(0.45715833, 0.45715836)
+texture = ExtResource("22_w1pf6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node"]
+position = Vector2(424.59366, 489.5122)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("23_iv7a1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node"]
+position = Vector2(437, 527.00006)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("24_swv4y")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node"]
+position = Vector2(438.99997, 591)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("25_kjidc")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node"]
+position = Vector2(183, 261)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("26_5esj5")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node"]
+position = Vector2(310, 214)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("27_p8p3k")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node"]
+position = Vector2(314.99997, 268)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("28_33p2w")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Node"]
+position = Vector2(474, 221)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("29_ond4r")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Node"]
+position = Vector2(458, 275)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("30_b5nah")
 
 [connection signal="pressed" from="next person" to="next person" method="_on_pressed"]
 [connection signal="pressed" from="close_button" to="." method="_on_close_pressed"]
