@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_vibno"]
 [ext_resource type="Texture2D" uid="uid://b2a4unl646q0q" path="res://assets/sprites/ayman/AymanBag.png" id="4_5vvw8"]
 [ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="4_uktjn"]
-[ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="6_dvx6k"]
+[ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passportAmina.tscn" id="6_dvx6k"]
 [ext_resource type="Script" uid="uid://42ladwavy46w" path="res://dema/scripts/report.gd" id="6_inpws"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_rp4pb"]
 [ext_resource type="PackedScene" uid="uid://duhxpgm2ngx3c" path="res://dema/scenes/dog.tscn" id="7_rp4pb"]
