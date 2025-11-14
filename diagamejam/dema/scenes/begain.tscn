@@ -1,19 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0rca05bdec30"]
 
-[ext_resource type="Texture2D" uid="uid://cos0rordupdua" path="res://dema/temp_assets/661d18262589732586d2b05f725f1e3b.jpg" id="1_mme0r"]
-[ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="2_x00aw"]
+[ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="1_mme0r"]
+[ext_resource type="Texture2D" uid="uid://bm0g52bixuceh" path="res://assets/sprites/Police.png" id="2_x00aw"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="3_mbvcc"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="bg" type="TextureRect" parent="."]
 offset_right = 1280.0
 offset_bottom = 721.0
 texture = ExtResource("1_mme0r")
+expand_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(651, 314)
-scale = Vector2(2.8203125, 2.6171875)
+position = Vector2(722.99927, 341)
+scale = Vector2(0.6770841, 0.6515192)
 texture = ExtResource("2_x00aw")
 
 [node name="Logic" parent="." instance=ExtResource("3_mbvcc")]
