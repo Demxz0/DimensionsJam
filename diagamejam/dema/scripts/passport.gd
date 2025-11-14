@@ -24,7 +24,7 @@ func _on_report_button_pressed():
 			get_tree().change_scene_to_file("res://dema/scenes/lose_end.tscn")
 		"Ayman":
 			get_tree().change_scene_to_file("res://dema/scenes/lose_end.tscn")
-		"Chabler":
+		"Charbel":
 			get_tree().change_scene_to_file("res://dema/scenes/win_end.tscn")
 		_:
 			print("No scene found for this selection!")
