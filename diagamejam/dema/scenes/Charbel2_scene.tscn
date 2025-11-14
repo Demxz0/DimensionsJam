@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bomu3ohbquxci"]
+[gd_scene load_steps=35 format=3 uid="uid://bomu3ohbquxci"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_u2vy7"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_lbeq3"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cuw13iw354cvt" path="res://assets/sprites/underClothes/blueSocks.png" id="28_33p2w"]
 [ext_resource type="Texture2D" uid="uid://brwdfpohbyheg" path="res://assets/sprites/shoes/shoesBlack.png" id="29_ond4r"]
 [ext_resource type="Texture2D" uid="uid://qsu0id31e3u7" path="res://assets/sprites/shoes/shoesWhite.png" id="30_b5nah"]
+[ext_resource type="Texture2D" uid="uid://l5i635tylsh6" path="res://assets/sprites/items/belt.png" id="31_w1pf6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g4v4"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -294,6 +295,11 @@ position = Vector2(183, 261)
 scale = Vector2(0.42932272, 0.42932275)
 texture = ExtResource("26_5esj5")
 
+[node name="Sprite2D11" type="Sprite2D" parent="Node"]
+position = Vector2(191, 224)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("26_5esj5")
+
 [node name="Sprite2D8" type="Sprite2D" parent="Node"]
 position = Vector2(310, 214)
 scale = Vector2(0.42932272, 0.42932275)
@@ -313,6 +319,11 @@ texture = ExtResource("29_ond4r")
 position = Vector2(458, 275)
 scale = Vector2(0.42932272, 0.42932275)
 texture = ExtResource("30_b5nah")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Node"]
+position = Vector2(241, 239)
+scale = Vector2(0.42932272, 0.42932275)
+texture = ExtResource("31_w1pf6")
 
 [connection signal="pressed" from="next person" to="next person" method="_on_pressed"]
 [connection signal="pressed" from="close_button" to="." method="_on_close_pressed"]
