@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://llorim2mmgde"
-path="res://.godot/imported/AminaBag.png-5c3cc16828503a7a18f9f6f242fa3d71.ctex"
+path="res://.godot/imported/AminaBag.png-621fe4b2106088cce7800f93e7090222.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/AminaBag.png"
-dest_files=["res://.godot/imported/AminaBag.png-5c3cc16828503a7a18f9f6f242fa3d71.ctex"]
+source_file="res://assets/sprites/amina/AminaBag.png"
+dest_files=["res://.godot/imported/AminaBag.png-621fe4b2106088cce7800f93e7090222.ctex"]
 
 [params]
 

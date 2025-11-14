@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpcaah3rpbody"
-path="res://.godot/imported/Amina.png-d5dae1f1ca1fb394cc113d46e2d32bd4.ctex"
+uid="uid://desqbe7mpiu5q"
+path="res://.godot/imported/shirtBlue.png-7769a942ae2b80cf570e0306b4c2fdf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Amina.png"
-dest_files=["res://.godot/imported/Amina.png-d5dae1f1ca1fb394cc113d46e2d32bd4.ctex"]
+source_file="res://assets/sprites/shirts/shirtBlue.png"
+dest_files=["res://.godot/imported/shirtBlue.png-7769a942ae2b80cf570e0306b4c2fdf2.ctex"]
 
 [params]
 

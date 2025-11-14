@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctrfwqfugusxc"
-path="res://.godot/imported/BagSuspicious.png-570deea7493778f0164c93da3b2b1de5.ctex"
+uid="uid://4a5orcalk3lv"
+path="res://.godot/imported/passportAyman.png-76b8f5f072f7a4b1f5c42b9d864b2a47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/BagSuspicious.png"
-dest_files=["res://.godot/imported/BagSuspicious.png-570deea7493778f0164c93da3b2b1de5.ctex"]
+source_file="res://assets/sprites/ayman/passportAyman.png"
+dest_files=["res://.godot/imported/passportAyman.png-76b8f5f072f7a4b1f5c42b9d864b2a47.ctex"]
 
 [params]
 

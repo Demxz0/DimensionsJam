@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6074o6nl7kad"
-path="res://.godot/imported/Ayman.png-5e342b2c2db11b42b50122410bf9062d.ctex"
+uid="uid://ctrfwqfugusxc"
+path="res://.godot/imported/BagSuspicious.png-d8912d0b9c9d19aca257b37ddf5de816.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Ayman.png"
-dest_files=["res://.godot/imported/Ayman.png-5e342b2c2db11b42b50122410bf9062d.ctex"]
+source_file="res://assets/sprites/charbel/BagSuspicious.png"
+dest_files=["res://.godot/imported/BagSuspicious.png-d8912d0b9c9d19aca257b37ddf5de816.ctex"]
 
 [params]
 

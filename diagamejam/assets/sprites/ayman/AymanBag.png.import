@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bddq7emri4jre"
-path="res://.godot/imported/Shirts.png-2b15a6d8c8360ee193cc335c034eb72a.ctex"
+uid="uid://b2a4unl646q0q"
+path="res://.godot/imported/AymanBag.png-807abbbd3900eecba9a3d7682f755c31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Shirts.png"
-dest_files=["res://.godot/imported/Shirts.png-2b15a6d8c8360ee193cc335c034eb72a.ctex"]
+source_file="res://assets/sprites/ayman/AymanBag.png"
+dest_files=["res://.godot/imported/AymanBag.png-807abbbd3900eecba9a3d7682f755c31.ctex"]
 
 [params]
 
