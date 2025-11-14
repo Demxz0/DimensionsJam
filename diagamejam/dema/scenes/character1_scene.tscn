@@ -1,11 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn60kup6mnc6n"]
+[gd_scene load_steps=10 format=3 uid="uid://dn60kup6mnc6n"]
 
 [ext_resource type="Texture2D" uid="uid://cos0rordupdua" path="res://dema/temp_assets/661d18262589732586d2b05f725f1e3b.jpg" id="1_mbt4i"]
+[ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_nsg31"]
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="2_150ti"]
 [ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="3_lg531"]
 [ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="4_nsg31"]
+[ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="5_lg531"]
+[ext_resource type="PackedScene" uid="uid://duhxpgm2ngx3c" path="res://dema/scenes/dog.tscn" id="7_jfsug"]
+[ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="8_p6tpv"]
+[ext_resource type="PackedScene" uid="uid://cixnacfr4f65k" path="res://dema/scenes/id.tscn" id="9_j2r2x"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_nsg31")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1219.0477
@@ -52,6 +58,13 @@ offset_right = 1224.0
 offset_bottom = 433.0
 texture_normal = ExtResource("4_nsg31")
 
+[node name="TextureButton4" type="TextureButton" parent="."]
+offset_left = 918.0
+offset_top = 88.0
+offset_right = 1054.0
+offset_bottom = 216.0
+texture_normal = ExtResource("4_nsg31")
+
 [node name="Label" type="Label" parent="."]
 offset_left = 1086.0
 offset_top = 38.0
@@ -75,5 +88,39 @@ offset_right = 1178.0
 offset_bottom = 292.0
 theme_override_font_sizes/font_size = 30
 text = "talk"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 966.0
+offset_top = 35.0
+offset_right = 1021.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 30
+text = "id"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 13.0
+offset_right = 237.0
+offset_bottom = 95.0
+text = "next person"
+
+[node name="Node2D2" parent="." instance=ExtResource("5_lg531")]
+visible = false
+
+[node name="Node2D3" parent="." instance=ExtResource("7_jfsug")]
+visible = false
+
+[node name="Logic" parent="." instance=ExtResource("8_p6tpv")]
+visible = false
+position = Vector2(2, -1)
+
+[node name="Node2D4" parent="." instance=ExtResource("9_j2r2x")]
+visible = false
+position = Vector2(-1, 2)
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_passport_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_dog_pressed"]
+[connection signal="pressed" from="TextureButton3" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_id_pressed"]
 
 [editable path="Node2D"]

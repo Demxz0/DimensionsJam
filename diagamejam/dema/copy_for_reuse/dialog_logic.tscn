@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://clujobpgkrdjm"]
+[gd_scene load_steps=10 format=3 uid="uid://clujobpgkrdjm"]
 
-[ext_resource type="Script" uid="uid://8l0r3t10lliw" path="res://scripts/dialog_logic.gd" id="1_ppbmj"]
-[ext_resource type="Texture2D" uid="uid://d2n5o16hsyoe0" path="res://assets/sprites/dialog_box.png" id="2_777q1"]
-[ext_resource type="FontFile" uid="uid://byhktyhr414ht" path="res://assets/fonts/kg_midnight_memories/KGMidnightMemories.ttf" id="3_777q1"]
-[ext_resource type="Script" uid="uid://cts5534yqv3d7" path="res://scripts/dialog_box.gd" id="3_yey3j"]
+[ext_resource type="Script" uid="uid://8l0r3t10lliw" path="res://dema/copy_for_reuse/dialog_logic.gd" id="1_ppbmj"]
+[ext_resource type="Texture2D" uid="uid://d2n5o16hsyoe0" path="res://dema/copy_for_reuse/assets/sprites/dialog_box.png" id="2_777q1"]
+[ext_resource type="FontFile" uid="uid://byhktyhr414ht" path="res://dema/copy_for_reuse/assets/fonts/kg_midnight_memories/KGMidnightMemories.ttf" id="3_777q1"]
+[ext_resource type="Script" uid="uid://cts5534yqv3d7" path="res://dema/copy_for_reuse/dialog_box.gd" id="3_yey3j"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_777q1"]
 
@@ -32,34 +32,6 @@ corner_radius_bottom_left = 40
 shadow_size = 13
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yey3j"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuboj"]
-bg_color = Color(0.95, 0.8569, 0.83599997, 0.3137255)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqtdb"]
-bg_color = Color(0.94509804, 0.85490197, 0.8352941, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psnit"]
-bg_color = Color(0.94509804, 0.85490197, 0.8352941, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7wny"]
-bg_color = Color(0.95, 0.8569, 0.83599997, 0.3137255)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
 
 [node name="Logic" type="Node2D"]
 script = ExtResource("1_ppbmj")
@@ -112,20 +84,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_dcqg1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yey3j")
 text = "Continue"
 
-[node name="Nextscene" type="Button" parent="."]
-offset_left = 38.0
-offset_top = 57.0
-offset_right = 251.0
-offset_bottom = 122.0
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_777q1")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_tuboj")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_hqtdb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_psnit")
-theme_override_styles/focus = SubResource("StyleBoxFlat_t7wny")
-text = "Move To Next Scene"
+[node name="Button" type="Button" parent="."]
+offset_left = 34.0
+offset_top = 119.0
+offset_right = 229.0
+offset_bottom = 198.0
+text = "close"
 
 [connection signal="pressed" from="Dialog/ContinueButton" to="." method="advance_dialogue"]
-[connection signal="pressed" from="Nextscene" to="." method="_on_nextscene_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_close_pressed"]

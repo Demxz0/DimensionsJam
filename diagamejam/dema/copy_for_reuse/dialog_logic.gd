@@ -6,10 +6,8 @@ signal dialogue_action_requested(action_key: String)
 @onready var name_label = $Dialog/Name
 @onready var dialogue_text_node = $Dialog/Script
 @onready var continue_button = $Dialog/ContinueButton
-@onready var next_scene_button = $Nextscene
 
 @export var dialogue_json_path: String = "res://dema/copy_for_reuse/fragments_dialogue.json"
-@export var next_scene_path: String = ""
 
 var dialogue_data: Array = []
 var current_line_index: int = 0
@@ -21,7 +19,6 @@ func _ready():
 	_load_and_setup_dialogue()
 	
 	continue_button.hide()
-	next_scene_button.hide()
 
 func load_dialogue_from_json(path: String) -> Array:
 	if not FileAccess.file_exists(path):
@@ -93,9 +90,10 @@ func display_line():
 		else:
 			current_line_index += 1
 			continue
-			
+	
+	# This is the only line that runs at the end now:
 	dialogue_box_parent.hide()
-	next_scene_button.show()
 
-func _on_nextscene_pressed() -> void:
-	get_tree().change_scene_to_file(next_scene_path)
+
+func _on_close_pressed() -> void:
+	$".".visible = false

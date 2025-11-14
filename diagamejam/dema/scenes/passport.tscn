@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://be063dlo22ukg"]
+
+[ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/passport.gd" id="1_bk2im"]
+[ext_resource type="Shader" uid="uid://cae6h168ffd87" path="res://dema/resources/passport.gdshader" id="1_pgms4"]
+[ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="2_bk2im"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cw4a8"]
+shader = ExtResource("1_pgms4")
+shader_parameter/lod = 1.0550000501125
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_bk2im")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_cw4a8")
+offset_right = 1280.0
+offset_bottom = 721.0
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 156.0
+offset_top = 52.0
+offset_right = 1123.0
+offset_bottom = 641.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(484.00003, 229.99997)
+scale = Vector2(4.1679683, 3.2343752)
+texture = ExtResource("2_bk2im")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 475.0
+offset_right = 589.0
+offset_bottom = 547.0
+text = "back"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_back_button_pressed"]
