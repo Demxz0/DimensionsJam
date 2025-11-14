@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2hq3m1ubdq8e"]
+[gd_scene load_steps=5 format=3 uid="uid://b2hq3m1ubdq8e"]
 
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="1_ocs4c"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="1_p2hup"]
+[ext_resource type="Texture2D" uid="uid://kgrh1isd0fpg" path="res://assets/sprites/logo.png" id="2_etfec"]
 [ext_resource type="Texture2D" uid="uid://bm0g52bixuceh" path="res://assets/sprites/Police.png" id="2_mucyo"]
 
 [node name="Node2D" type="Node2D"]
@@ -10,6 +11,15 @@
 offset_right = 1283.0
 offset_bottom = 724.0
 texture = ExtResource("1_p2hup")
+expand_mode = 1
+
+[node name="logo" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.6313726)
+offset_left = 133.0
+offset_top = -11.0
+offset_right = 765.0
+offset_bottom = 624.25104
+texture = ExtResource("2_etfec")
 expand_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
