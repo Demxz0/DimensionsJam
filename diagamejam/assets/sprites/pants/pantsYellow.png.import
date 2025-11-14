@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg6fdvk2v7pj2"
-path="res://.godot/imported/PantsNShoes.png-947d46289a1d650bf8f54c6778f86e9b.ctex"
+uid="uid://dn8ipebv4srae"
+path="res://.godot/imported/pantsYellow.png-7d1d7be428b9f1491ba696eafba5f936.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/PantsNShoes.png"
-dest_files=["res://.godot/imported/PantsNShoes.png-947d46289a1d650bf8f54c6778f86e9b.ctex"]
+source_file="res://assets/sprites/pants/pantsYellow.png"
+dest_files=["res://.godot/imported/pantsYellow.png-7d1d7be428b9f1491ba696eafba5f936.ctex"]
 
 [params]
 

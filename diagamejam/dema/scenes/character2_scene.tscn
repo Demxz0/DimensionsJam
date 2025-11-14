@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bomu3ohbquxci"]
+[gd_scene load_steps=20 format=3 uid="uid://bomu3ohbquxci"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_u2vy7"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_lbeq3"]
+[ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_uawf5"]
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="3_wrtgf"]
 [ext_resource type="Texture2D" uid="uid://ctrfwqfugusxc" path="res://assets/sprites/charbel/BagSuspicious.png" id="4_cui7n"]
 [ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="4_lbeq3"]
@@ -45,6 +46,13 @@ offset_right = 1219.0477
 offset_bottom = 685.71436
 scale = Vector2(1.05, 1.05)
 texture = ExtResource("2_lbeq3")
+expand_mode = 1
+
+[node name="base" type="TextureRect" parent="."]
+offset_top = 219.0
+offset_right = 1281.0
+offset_bottom = 743.0
+texture = ExtResource("3_uawf5")
 expand_mode = 1
 
 [node name="bag" parent="." instance=ExtResource("3_wrtgf")]

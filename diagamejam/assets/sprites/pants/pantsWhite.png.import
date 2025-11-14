@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgw2vmrytso22"
-path="res://.godot/imported/Icons.png-8cc9ac6a9b46ba45bbbece837d849020.ctex"
+uid="uid://jf48dtqat1al"
+path="res://.godot/imported/pantsWhite.png-02edb2e976013e04ace4c76b61f30cd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Icons.png"
-dest_files=["res://.godot/imported/Icons.png-8cc9ac6a9b46ba45bbbece837d849020.ctex"]
+source_file="res://assets/sprites/pants/pantsWhite.png"
+dest_files=["res://.godot/imported/pantsWhite.png-02edb2e976013e04ace4c76b61f30cd5.ctex"]
 
 [params]
 
