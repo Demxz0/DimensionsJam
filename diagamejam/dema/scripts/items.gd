@@ -1,32 +1,27 @@
 extends Node2D 
 
-var option_button
-var report_button
+@onready var option_button = $"../Node2D5/choice"
+@onready var report_button = $"../Node2D5/report"
 
 func _ready():
-	print("=== READY FUNCTION STARTED ===")
-	
-	# Get nodes directly in _ready() instead of using @onready
-	option_button = get_node("../Node2D5/choice")
-	report_button = get_node("../Node2D5/report")
-	
+	print("=== Script is running on node: ", self.name, " ===")
 	print("option_button: ", option_button)
 	print("report_button: ", report_button)
 	
 	if report_button == null:
-		push_error("report_button is null!")
+		push_error("report_button is NULL! Script is on wrong node or path is wrong")
 		return
 	
 	if option_button == null:
-		push_error("option_button is null!")
+		push_error("option_button is NULL! Script is on wrong node or path is wrong")
 		return
 	
-	print("About to connect signal...")
+	print("Connecting signal...")
 	report_button.pressed.connect(_on_report_button_pressed)
-	print("Signal connected successfully!")
+	print("Signal connected!")
 
 func _on_report_button_pressed():
-	print("=== BUTTON PRESSED! ===")
+	print("=== BUTTON CLICKED! ===")
 	
 	var selected_index = option_button.get_selected_id()
 	print("Selected index: ", selected_index)
@@ -40,13 +35,13 @@ func _on_report_button_pressed():
 	
 	match selected_character:
 		"Amina":
-			print("Changing to lose_end scene...")
+			print("Going to lose_end...")
 			get_tree().change_scene_to_file("res://dema/scenes/lose_end.tscn")
 		"Ayman":
-			print("Changing to lose_end scene...")
+			print("Going to lose_end...")
 			get_tree().change_scene_to_file("res://dema/scenes/lose_end.tscn")
 		"Charbel":
-			print("Changing to win_end scene...")
+			print("Going to win_end...")
 			get_tree().change_scene_to_file("res://dema/scenes/win_end.tscn")
 		_:
 			print("No scene found for this selection!")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cbcd7ljipurud"]
+[gd_scene load_steps=21 format=3 uid="uid://cbcd7ljipurud"]
 
 [ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/items.gd" id="1_lo0kl"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_jdum3"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b8jibynafjobu" path="res://assets/sfx/international-airport-intercom-madeira-19947.mp3" id="6_2vd8n"]
 [ext_resource type="Script" uid="uid://l1ap1qrfsidt" path="res://dema/scripts/back2.gd" id="6_3q7a1"]
 [ext_resource type="AudioStream" uid="uid://vjcmqfhpwjgc" path="res://assets/sfx/interrogation-techniques-189974.mp3" id="7_383hi"]
+[ext_resource type="Script" uid="uid://b7xau0mlohdki" path="res://dema/scripts/report2.gd" id="7_lfkuf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cw4a8"]
 shader = ExtResource("2_w2upe")
@@ -68,7 +69,7 @@ border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0.7490196, 0.23921569, 0.31764707, 1)
+border_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -169,7 +170,7 @@ popup/item_1/id = 1
 popup/item_2/text = "Charbel"
 popup/item_2/id = 2
 
-[node name="report" type="Button" parent="."]
+[node name="report" type="Button" parent="." node_paths=PackedStringArray("option_button")]
 offset_left = 533.0
 offset_top = 432.0
 offset_right = 746.0
@@ -182,6 +183,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_fjr2v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fixw4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nt00v")
 text = "Report"
+script = ExtResource("7_lfkuf")
+option_button = NodePath("../choice")
 
 [node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_2vd8n")

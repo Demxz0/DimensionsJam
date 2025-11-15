@@ -188,20 +188,6 @@ text = "Talk to suspect"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="next person" type="Button" parent="."]
-offset_left = 24.0
-offset_top = 13.0
-offset_right = 237.0
-offset_bottom = 95.0
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_x3n0v")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_yitul")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2lccn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_x1xge")
-text = "Next Person"
-
 [node name="close_button" type="Button" parent="."]
 visible = false
 offset_left = 23.0
@@ -249,17 +235,14 @@ parameters/looping = false
 [node name="Node2D" parent="." instance=ExtResource("17_8dxhw")]
 visible = false
 z_index = 1
-script = null
 
 [node name="Node2D2" parent="." instance=ExtResource("18_8eyhq")]
 visible = false
 z_index = 1
-script = null
 
 [node name="Node2D3" parent="." instance=ExtResource("19_g0i4f")]
 visible = false
 z_index = 1
-script = null
 
 [node name="items" type="Node" parent="."]
 
@@ -336,14 +319,26 @@ rotation = -0.59166664
 scale = Vector2(0.13388328, 0.14346345)
 texture = ExtResource("30_k3kfu")
 
-[node name="Node" parent="." instance=ExtResource("20_8eyhq")]
+[node name="next person" type="Button" parent="items"]
+offset_left = 24.0
+offset_top = 13.0
+offset_right = 237.0
+offset_bottom = 95.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_x3n0v")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_yitul")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lccn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x1xge")
+text = "Next Person"
 
 [connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
 [connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]
 [connection signal="pressed" from="dog/DogButton" to="." method="_on_dog_pressed"]
 [connection signal="pressed" from="talk/talkButton" to="." method="_on_talk_pressed"]
-[connection signal="pressed" from="next person" to="." method="_on_next1_pressed"]
 [connection signal="pressed" from="close_button" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="items/next person" to="." method="_on_next1_pressed"]
 
 [editable path="bag"]
 [editable path="passport_scene"]

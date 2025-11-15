@@ -1,4 +1,3 @@
-[gd_scene load_steps=25 format=3 uid="uid://dflsmu7fpluse"]
 [gd_scene load_steps=40 format=3 uid="uid://dflsmu7fpluse"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_8nv1r"]
@@ -7,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_vibno"]
 [ext_resource type="Texture2D" uid="uid://b2a4unl646q0q" path="res://assets/sprites/ayman/AymanBag.png" id="4_5vvw8"]
 [ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="6_dvx6k"]
-[ext_resource type="Script" path="res://dema/scripts/report.gd" id="6_inpws"]
+[ext_resource type="Script" uid="uid://42ladwavy46w" path="res://dema/scripts/report.gd" id="6_inpws"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_rp4pb"]
 [ext_resource type="PackedScene" uid="uid://duhxpgm2ngx3c" path="res://dema/scenes/dog.tscn" id="7_rp4pb"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="8_8evrj"]
@@ -21,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://bkkoxksmj50sn" path="res://dema/scenes/passportAyman.tscn" id="18_wvu3b"]
 [ext_resource type="PackedScene" uid="uid://3dgguex8arq4" path="res://dema/scenes/idAyman.tscn" id="19_cyujh"]
 [ext_resource type="PackedScene" uid="uid://bjj7qdx7osdpd" path="res://dema/scenes/dogSafe.tscn" id="20_b4uu3"]
-[ext_resource type="PackedScene" uid="uid://glkoar0isd2l" path="res://dema/scenes/back_button_logic.tscn" id="21_cyujh"]
 [ext_resource type="Texture2D" uid="uid://bi32imtu87dfh" path="res://assets/sprites/shirts/shirtRed.png" id="21_3wf0d"]
 [ext_resource type="Texture2D" uid="uid://dn8ipebv4srae" path="res://assets/sprites/pants/pantsYellow.png" id="22_2e47c"]
 [ext_resource type="Texture2D" uid="uid://dq3ij5du578xt" path="res://assets/sprites/pants/pantsGrey.png" id="23_xglx1"]
@@ -196,21 +194,6 @@ position = Vector2(736, 307.00003)
 scale = Vector2(0.3434074, 0.35248122)
 texture = ExtResource("4_5vvw8")
 
-[node name="report" type="Button" parent="."]
-offset_left = 24.0
-offset_top = 13.0
-offset_right = 237.0
-offset_bottom = 95.0
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_rp4pb")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_8evrj")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5vvw8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vibno")
-text = "Report Suspect"
-script = ExtResource("6_inpws")
-
 [node name="Logic" parent="." instance=ExtResource("8_8evrj")]
 visible = false
 z_index = 1
@@ -220,18 +203,15 @@ dialogue_json_path = "res://dema/resources/ayman_talk.json"
 [node name="passport_scene" parent="." instance=ExtResource("6_dvx6k")]
 visible = false
 z_index = 1
-script = null
 
 [node name="dog_scene" parent="." instance=ExtResource("7_rp4pb")]
 visible = false
 z_index = 1
-script = null
 
 [node name="id_scene" parent="." instance=ExtResource("9_xe735")]
 visible = false
 z_index = 1
 position = Vector2(-1, 2)
-script = null
 
 [node name="Node2D5" parent="." instance=ExtResource("11_uktjn")]
 visible = false
@@ -246,17 +226,14 @@ parameters/looping = false
 [node name="Node2D" parent="." instance=ExtResource("18_wvu3b")]
 visible = false
 z_index = 1
-script = null
 
 [node name="Node2D2" parent="." instance=ExtResource("19_cyujh")]
 visible = false
 z_index = 1
-script = null
 
 [node name="Node2D3" parent="." instance=ExtResource("20_b4uu3")]
 visible = false
 z_index = 1
-script = null
 
 [node name="Node" type="Node" parent="."]
 
@@ -362,13 +339,26 @@ position = Vector2(431, 556)
 scale = Vector2(0.30903566, 0.30764958)
 texture = ExtResource("36_vd06s")
 
-[node name="Node" parent="." instance=ExtResource("21_cyujh")]
+[node name="report" type="Button" parent="Node"]
+offset_left = 24.0
+offset_top = 13.0
+offset_right = 237.0
+offset_bottom = 95.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rp4pb")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_8evrj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5vvw8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vibno")
+text = "Report Suspect"
+script = ExtResource("6_inpws")
 
 [connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
 [connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]
 [connection signal="pressed" from="dog/DogButton" to="." method="_on_dog_pressed"]
 [connection signal="pressed" from="talk/talkButton2" to="." method="_on_talk_pressed"]
-[connection signal="pressed" from="report" to="report" method="_on_pressed"]
+[connection signal="pressed" from="Node/report" to="Node/report" method="_on_pressed"]
 
 [editable path="bag"]
 [editable path="Node2D5"]
