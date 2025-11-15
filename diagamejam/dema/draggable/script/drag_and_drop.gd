@@ -6,7 +6,7 @@ class_name DraggablePiece
 
 
 @onready var item_bounds = $ItemBounds 
-
+@onready var sprite = $Sprite2D
 #flags
 var dragging := false
 var draggable := true
@@ -15,7 +15,8 @@ var original_position := Vector2.ZERO
 
 func _ready():
 	original_position = global_position
-
+	sprite.texture = texture
+	
 func get_zone_rect() -> Rect2:
 	if containment_zone:
 		return containment_zone.get_global_rect()
