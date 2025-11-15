@@ -69,9 +69,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_tqklg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gx6tb")
 text = "Back to Main Menu"
 
-[connection signal="pressed" from="backtomainmenu" to="." method="_on_backtomainmenu_pressed"]
-
 [node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_etfec")
 autoplay = true
 parameters/looping = false
+
+[connection signal="pressed" from="backtomainmenu" to="." method="_on_backtomainmenu_pressed"]

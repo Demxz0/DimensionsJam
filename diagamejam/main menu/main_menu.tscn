@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://b80151d4ceilg"]
+[gd_scene load_steps=17 format=3 uid="uid://b80151d4ceilg"]
 
+[ext_resource type="Script" uid="uid://de1e4b8tib8hx" path="res://main menu/main_menu.gd" id="1_6fy38"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="1_ra13p"]
 [ext_resource type="Texture2D" uid="uid://kgrh1isd0fpg" path="res://assets/sprites/logo.png" id="2_45qoi"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="3_6fy38"]
@@ -96,6 +97,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.1
+script = ExtResource("1_6fy38")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
