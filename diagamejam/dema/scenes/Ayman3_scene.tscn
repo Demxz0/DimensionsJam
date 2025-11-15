@@ -1,13 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://dflsmu7fpluse"]
+[gd_scene load_steps=24 format=3 uid="uid://dflsmu7fpluse"]
 
-[ext_resource type="Script" path="res://dema/scripts/game_scene.gd" id="1_8nv1r"]
+[ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_8nv1r"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_swvbl"]
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="3_inpws"]
 [ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_vibno"]
 [ext_resource type="Texture2D" uid="uid://b2a4unl646q0q" path="res://assets/sprites/ayman/AymanBag.png" id="4_5vvw8"]
-[ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="4_uktjn"]
-[ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passportAmina.tscn" id="6_dvx6k"]
-[ext_resource type="Script" path="res://dema/scripts/report.gd" id="6_inpws"]
+[ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="6_dvx6k"]
+[ext_resource type="Script" uid="uid://42ladwavy46w" path="res://dema/scripts/report.gd" id="6_inpws"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_rp4pb"]
 [ext_resource type="PackedScene" uid="uid://duhxpgm2ngx3c" path="res://dema/scenes/dog.tscn" id="7_rp4pb"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="8_8evrj"]
@@ -18,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://behuvaj3qumba" path="res://assets/sprites/Message_20220327175432.png" id="14_vibno"]
 [ext_resource type="Texture2D" uid="uid://4a5orcalk3lv" path="res://assets/sprites/ayman/passportAyman.png" id="15_5vvw8"]
 [ext_resource type="AudioStream" uid="uid://b8jibynafjobu" path="res://assets/sfx/international-airport-intercom-madeira-19947.mp3" id="18_ux7da"]
+[ext_resource type="PackedScene" uid="uid://bkkoxksmj50sn" path="res://dema/scenes/passportAyman.tscn" id="18_wvu3b"]
+[ext_resource type="PackedScene" uid="uid://3dgguex8arq4" path="res://dema/scenes/idAyman.tscn" id="19_cyujh"]
+[ext_resource type="PackedScene" uid="uid://bjj7qdx7osdpd" path="res://dema/scenes/dogSafe.tscn" id="20_b4uu3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8evrj"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -217,15 +219,27 @@ script = null
 visible = false
 z_index = 1
 
-[connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
-[connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]
-[connection signal="pressed" from="dog/DogButton" to="." method="_on_dog_pressed"]
-[connection signal="pressed" from="talk/talkButton2" to="." method="_on_talk_pressed"]
 [node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_ux7da")
 autoplay = true
 parameters/looping = false
 
+[node name="Node2D" parent="." instance=ExtResource("18_wvu3b")]
+visible = false
+z_index = 1
+
+[node name="Node2D2" parent="." instance=ExtResource("19_cyujh")]
+visible = false
+z_index = 1
+
+[node name="Node2D3" parent="." instance=ExtResource("20_b4uu3")]
+visible = false
+z_index = 1
+
+[connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
+[connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]
+[connection signal="pressed" from="dog/DogButton" to="." method="_on_dog_pressed"]
+[connection signal="pressed" from="talk/talkButton2" to="." method="_on_talk_pressed"]
 [connection signal="pressed" from="report" to="report" method="_on_pressed"]
 
 [editable path="bag"]

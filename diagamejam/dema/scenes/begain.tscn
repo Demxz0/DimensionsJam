@@ -1,5 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0rca05bdec30"]
-[gd_scene load_steps=6 format=3 uid="uid://c0rca05bdec30"]
+[gd_scene load_steps=11 format=3 uid="uid://c0rca05bdec30"]
 
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="1_mme0r"]
 [ext_resource type="Script" uid="uid://d3mrdahhplor6" path="res://dema/scripts/begain.gd" id="1_yl6ui"]
@@ -7,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bm0g52bixuceh" path="res://assets/sprites/Police.png" id="2_x00aw"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="3_mbvcc"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="5_mbvcc"]
+[ext_resource type="AudioStream" uid="uid://b8jibynafjobu" path="res://assets/sfx/international-airport-intercom-madeira-19947.mp3" id="6_mbvcc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yl6ui"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -28,7 +28,6 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-[ext_resource type="AudioStream" uid="uid://b8jibynafjobu" path="res://assets/sfx/international-airport-intercom-madeira-19947.mp3" id="5_mbvcc"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_yl6ui")
@@ -70,9 +69,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7wb0p")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4ka24")
 text = "Move to room"
 
-[connection signal="pressed" from="movetoscene1" to="." method="_on_movetoscene_1_pressed"]
-
 [node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_mbvcc")
+stream = ExtResource("6_mbvcc")
 autoplay = true
 parameters/looping = false
+
+[connection signal="pressed" from="movetoscene1" to="." method="_on_movetoscene_1_pressed"]
