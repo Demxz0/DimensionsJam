@@ -76,7 +76,7 @@ position = Vector2(413, 461)
 containment_zone = NodePath("../bag/ColorRect")
 
 [node name="Draggable3" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("4_uktjn")]
-position = Vector2(554, 446)
+position = Vector2(374, 581)
 containment_zone = NodePath("../bag/ColorRect")
 
 [node name="report" type="Button" parent="."]
