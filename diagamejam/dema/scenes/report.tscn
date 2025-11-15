@@ -1,10 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://cbcd7ljipurud"]
+[gd_scene load_steps=19 format=3 uid="uid://cbcd7ljipurud"]
 
 [ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/passport.gd" id="1_lo0kl"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_jdum3"]
-[ext_resource type="Shader" uid="uid://cae6h168ffd87" path="res://dema/resources/passport.gdshader" id="2_w2upe"]
+[ext_resource type="Shader" path="res://dema/resources/passport.gdshader" id="2_w2upe"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="4_2vd8n"]
 [ext_resource type="Texture2D" uid="uid://kgrh1isd0fpg" path="res://assets/sprites/logo.png" id="4_jdum3"]
+[ext_resource type="AudioStream" uid="uid://b8jibynafjobu" path="res://assets/sfx/international-airport-intercom-madeira-19947.mp3" id="6_2vd8n"]
+[ext_resource type="AudioStream" uid="uid://vjcmqfhpwjgc" path="res://assets/sfx/interrogation-techniques-189974.mp3" id="7_383hi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cw4a8"]
 shader = ExtResource("2_w2upe")
@@ -178,5 +180,16 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_fjr2v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fixw4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nt00v")
 text = "Report"
+
+[node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_2vd8n")
+autoplay = true
+parameters/looping = false
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_383hi")
+volume_db = -1.0
+autoplay = true
+parameters/looping = false
 
 [connection signal="pressed" from="Panel/back" to="." method="_on_back_button_pressed"]

@@ -27,6 +27,7 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+[ext_resource type="AudioStream" uid="uid://b8jibynafjobu" path="res://assets/sfx/international-airport-intercom-madeira-19947.mp3" id="5_etfec"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_2gwiu")
@@ -69,3 +70,8 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gx6tb")
 text = "Back to Main Menu"
 
 [connection signal="pressed" from="backtomainmenu" to="." method="_on_backtomainmenu_pressed"]
+
+[node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_etfec")
+autoplay = true
+parameters/looping = false

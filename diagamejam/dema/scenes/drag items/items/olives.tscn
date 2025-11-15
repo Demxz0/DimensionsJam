@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2vvaykqtvteg"]
+
+[ext_resource type="Script" uid="uid://borrymw54anl" path="res://dema/draggable/script/drag_and_drop.gd" id="1_kbxb8"]
+[ext_resource type="Texture2D" uid="uid://crtsgohqv72dm" path="res://assets/sprites/items/olives.png" id="2_o751p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tue4c"]
+radius = 122.5
+height = 636.0
+
+[node name="Draggable" type="CharacterBody2D"]
+input_pickable = true
+script = ExtResource("1_kbxb8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_o751p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("CapsuleShape2D_tue4c")
+debug_color = Color(1, 0.4745098, 0.27450982, 0.41960785)
+
+[node name="ItemBounds" type="ColorRect" parent="."]
+visible = false
+offset_left = -123.0
+offset_top = -305.0
+offset_right = 127.0
+offset_bottom = 314.0
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
