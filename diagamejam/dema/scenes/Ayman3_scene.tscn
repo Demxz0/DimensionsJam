@@ -1,4 +1,5 @@
 [gd_scene load_steps=25 format=3 uid="uid://dflsmu7fpluse"]
+[gd_scene load_steps=40 format=3 uid="uid://dflsmu7fpluse"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_8nv1r"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_swvbl"]
@@ -6,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_vibno"]
 [ext_resource type="Texture2D" uid="uid://b2a4unl646q0q" path="res://assets/sprites/ayman/AymanBag.png" id="4_5vvw8"]
 [ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="6_dvx6k"]
-[ext_resource type="Script" uid="uid://42ladwavy46w" path="res://dema/scripts/report.gd" id="6_inpws"]
+[ext_resource type="Script" path="res://dema/scripts/report.gd" id="6_inpws"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_rp4pb"]
 [ext_resource type="PackedScene" uid="uid://duhxpgm2ngx3c" path="res://dema/scenes/dog.tscn" id="7_rp4pb"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="8_8evrj"]
@@ -21,6 +22,22 @@
 [ext_resource type="PackedScene" uid="uid://3dgguex8arq4" path="res://dema/scenes/idAyman.tscn" id="19_cyujh"]
 [ext_resource type="PackedScene" uid="uid://bjj7qdx7osdpd" path="res://dema/scenes/dogSafe.tscn" id="20_b4uu3"]
 [ext_resource type="PackedScene" uid="uid://glkoar0isd2l" path="res://dema/scenes/back_button_logic.tscn" id="21_cyujh"]
+[ext_resource type="Texture2D" uid="uid://bi32imtu87dfh" path="res://assets/sprites/shirts/shirtRed.png" id="21_3wf0d"]
+[ext_resource type="Texture2D" uid="uid://dn8ipebv4srae" path="res://assets/sprites/pants/pantsYellow.png" id="22_2e47c"]
+[ext_resource type="Texture2D" uid="uid://dq3ij5du578xt" path="res://assets/sprites/pants/pantsGrey.png" id="23_xglx1"]
+[ext_resource type="Texture2D" uid="uid://c62deopffhj23" path="res://assets/sprites/shirts/shirtYellow.png" id="24_1cb7u"]
+[ext_resource type="Texture2D" uid="uid://he80s10i3d0y" path="res://assets/sprites/shoes/slippersBlue.png" id="25_fpjf0"]
+[ext_resource type="Texture2D" uid="uid://ca625ujtku2nc" path="res://assets/sprites/underClothes/underpantsPink.png" id="26_bsx5i"]
+[ext_resource type="Texture2D" uid="uid://c4kpxbhwyk65c" path="res://assets/sprites/underClothes/underpantsGrey.png" id="27_4j43x"]
+[ext_resource type="Texture2D" uid="uid://bljgpjs813pit" path="res://assets/sprites/underClothes/whiteSocks.png" id="28_b4nwk"]
+[ext_resource type="Texture2D" uid="uid://cuw13iw354cvt" path="res://assets/sprites/underClothes/blueSocks.png" id="29_jhggb"]
+[ext_resource type="Texture2D" uid="uid://btgqh5pmnaxxq" path="res://assets/sprites/underClothes/redSocks.png" id="30_22uqs"]
+[ext_resource type="Texture2D" uid="uid://l5i635tylsh6" path="res://assets/sprites/items/belt.png" id="31_2hm65"]
+[ext_resource type="Texture2D" uid="uid://dauamiho1asow" path="res://assets/sprites/items/bullets.png" id="32_gbje6"]
+[ext_resource type="Texture2D" uid="uid://bjxetgfkakvoy" path="res://assets/sprites/items/gun.png" id="33_8ai21"]
+[ext_resource type="Texture2D" uid="uid://ulioxw7qeqjk" path="res://assets/sprites/shoes/slippersYellow.png" id="34_pd2nt"]
+[ext_resource type="Texture2D" uid="uid://7mta6go681ub" path="res://assets/sprites/items/catGum.png" id="35_gxdk0"]
+[ext_resource type="Texture2D" uid="uid://bja8usdsqomm7" path="res://assets/sprites/items/masbaha.png" id="36_vd06s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8evrj"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -219,6 +236,7 @@ script = null
 [node name="Node2D5" parent="." instance=ExtResource("11_uktjn")]
 visible = false
 z_index = 1
+script = null
 
 [node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_ux7da")
@@ -228,14 +246,121 @@ parameters/looping = false
 [node name="Node2D" parent="." instance=ExtResource("18_wvu3b")]
 visible = false
 z_index = 1
+script = null
 
 [node name="Node2D2" parent="." instance=ExtResource("19_cyujh")]
 visible = false
 z_index = 1
+script = null
 
 [node name="Node2D3" parent="." instance=ExtResource("20_b4uu3")]
 visible = false
 z_index = 1
+script = null
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+position = Vector2(426, 472.00006)
+scale = Vector2(0.4829546, 0.4829546)
+texture = ExtResource("21_3wf0d")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node"]
+position = Vector2(197, 527)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("22_2e47c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node"]
+position = Vector2(265, 519)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("23_xglx1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node"]
+position = Vector2(444, 527)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("24_1cb7u")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node"]
+position = Vector2(480.99997, 270.99997)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("25_fpjf0")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node"]
+position = Vector2(222.99997, 131.99998)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("26_bsx5i")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Node"]
+position = Vector2(246.99997, 175)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("27_4j43x")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Node"]
+position = Vector2(452, 602.00006)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("28_b4nwk")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Node"]
+position = Vector2(211.99994, 253.99997)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("29_jhggb")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Node"]
+position = Vector2(268, 256)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("30_22uqs")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Node"]
+position = Vector2(348, 263)
+scale = Vector2(0.39083514, 0.3908351)
+texture = ExtResource("31_2hm65")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Node"]
+position = Vector2(334, 124)
+scale = Vector2(0.26208425, 0.26090875)
+texture = ExtResource("32_gbje6")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Node"]
+position = Vector2(358, 152.00002)
+scale = Vector2(0.26208425, 0.26090875)
+texture = ExtResource("32_gbje6")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Node"]
+position = Vector2(455, 143)
+scale = Vector2(0.30903566, 0.30764958)
+texture = ExtResource("33_8ai21")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Node"]
+position = Vector2(487, 239.00002)
+scale = Vector2(0.37041056, 0.3687492)
+texture = ExtResource("34_pd2nt")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Node"]
+position = Vector2(420, 215.00002)
+scale = Vector2(0.15728661, 0.15658115)
+texture = ExtResource("35_gxdk0")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Node"]
+position = Vector2(363, 595)
+scale = Vector2(0.15728661, 0.15658115)
+texture = ExtResource("35_gxdk0")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Node"]
+position = Vector2(357, 260)
+rotation = 0.7400196
+scale = Vector2(0.15728661, 0.15658115)
+texture = ExtResource("35_gxdk0")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Node"]
+position = Vector2(522, 121)
+rotation = 0.7400196
+scale = Vector2(0.15728661, 0.15658115)
+texture = ExtResource("35_gxdk0")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Node"]
+position = Vector2(431, 556)
+scale = Vector2(0.30903566, 0.30764958)
+texture = ExtResource("36_vd06s")
 
 [node name="Node" parent="." instance=ExtResource("21_cyujh")]
 

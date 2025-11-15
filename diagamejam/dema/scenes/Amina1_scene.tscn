@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dn60kup6mnc6n"]
+[gd_scene load_steps=34 format=3 uid="uid://dn60kup6mnc6n"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_nsg31"]
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="2_150ti"]
@@ -19,7 +19,17 @@
 [ext_resource type="PackedScene" uid="uid://d1pgu2gcdq85g" path="res://dema/scenes/passportAmina.tscn" id="17_8dxhw"]
 [ext_resource type="PackedScene" uid="uid://bw04a41patjmh" path="res://dema/scenes/idAmina.tscn" id="18_8eyhq"]
 [ext_resource type="PackedScene" uid="uid://dw4oxdxnf5egb" path="res://dema/scenes/dogNotSafe.tscn" id="19_g0i4f"]
-[ext_resource type="PackedScene" uid="uid://glkoar0isd2l" path="res://dema/scenes/back_button_logic.tscn" id="20_8eyhq"]
+[ext_resource type="Texture2D" uid="uid://jf48dtqat1al" path="res://assets/sprites/pants/pantsWhite.png" id="20_i0rom"]
+[ext_resource type="Texture2D" uid="uid://c62deopffhj23" path="res://assets/sprites/shirts/shirtYellow.png" id="21_lh6sk"]
+[ext_resource type="Texture2D" uid="uid://civ4d5qyela2p" path="res://assets/sprites/shirts/shirtWhite.png" id="22_je0hg"]
+[ext_resource type="Texture2D" uid="uid://bljgpjs813pit" path="res://assets/sprites/underClothes/whiteSocks.png" id="23_xoftf"]
+[ext_resource type="Texture2D" uid="uid://qsu0id31e3u7" path="res://assets/sprites/shoes/shoesWhite.png" id="24_l3gd3"]
+[ext_resource type="Texture2D" uid="uid://ulioxw7qeqjk" path="res://assets/sprites/shoes/slippersYellow.png" id="25_achme"]
+[ext_resource type="Texture2D" uid="uid://crtsgohqv72dm" path="res://assets/sprites/items/olives.png" id="26_5007w"]
+[ext_resource type="Texture2D" uid="uid://5aipjh6vm8jx" path="res://assets/sprites/items/zaatar.png" id="27_5gswp"]
+[ext_resource type="Texture2D" uid="uid://bja8usdsqomm7" path="res://assets/sprites/items/masbaha.png" id="28_tdtyq"]
+[ext_resource type="Texture2D" uid="uid://b0in3mqn10cgw" path="res://assets/sprites/items/ring.png" id="29_omkd0"]
+[ext_resource type="Texture2D" uid="uid://bkl83gk6gxwnf" path="res://assets/sprites/items/shaarawi.png" id="30_k3kfu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yitul"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -229,6 +239,7 @@ position = Vector2(-1, 2)
 [node name="Node2D5" parent="." instance=ExtResource("14_m6qi0")]
 visible = false
 z_index = 1
+script = null
 
 [node name="airportsfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_6ro8i")
@@ -238,14 +249,92 @@ parameters/looping = false
 [node name="Node2D" parent="." instance=ExtResource("17_8dxhw")]
 visible = false
 z_index = 1
+script = null
 
 [node name="Node2D2" parent="." instance=ExtResource("18_8eyhq")]
 visible = false
 z_index = 1
+script = null
 
 [node name="Node2D3" parent="." instance=ExtResource("19_g0i4f")]
 visible = false
 z_index = 1
+script = null
+
+[node name="items" type="Node" parent="."]
+
+[node name="Sprite2D4" type="Sprite2D" parent="items"]
+position = Vector2(219, 511.00003)
+scale = Vector2(0.4000871, 0.4000871)
+texture = ExtResource("20_i0rom")
+
+[node name="Sprite2D6" type="Sprite2D" parent="items"]
+position = Vector2(325, 505)
+scale = Vector2(0.4552376, 0.4900039)
+texture = ExtResource("21_lh6sk")
+
+[node name="Sprite2D5" type="Sprite2D" parent="items"]
+position = Vector2(400, 509)
+scale = Vector2(0.5558719, 0.5956479)
+texture = ExtResource("22_je0hg")
+
+[node name="Sprite2D9" type="Sprite2D" parent="items"]
+position = Vector2(505, 575)
+scale = Vector2(0.5558719, 0.5956479)
+texture = ExtResource("23_xoftf")
+
+[node name="Sprite2D8" type="Sprite2D" parent="items"]
+position = Vector2(525, 481)
+rotation = 1.9966567
+scale = Vector2(0.47358814, 0.51066196)
+texture = ExtResource("24_l3gd3")
+
+[node name="Sprite2D7" type="Sprite2D" parent="items"]
+position = Vector2(488, 257)
+scale = Vector2(0.5558719, 0.5956479)
+texture = ExtResource("25_achme")
+
+[node name="Sprite2D" type="Sprite2D" parent="items"]
+position = Vector2(233, 187)
+scale = Vector2(0.3546196, 0.35461953)
+texture = ExtResource("26_5007w")
+
+[node name="Sprite2D10" type="Sprite2D" parent="items"]
+position = Vector2(304, 185.00002)
+scale = Vector2(0.3546196, 0.35461953)
+texture = ExtResource("26_5007w")
+
+[node name="Sprite2D2" type="Sprite2D" parent="items"]
+position = Vector2(492, 153)
+scale = Vector2(0.4000871, 0.4000871)
+texture = ExtResource("27_5gswp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="items"]
+position = Vector2(404, 522.00006)
+scale = Vector2(0.4000871, 0.4000871)
+texture = ExtResource("28_tdtyq")
+
+[node name="Sprite2D11" type="Sprite2D" parent="items"]
+position = Vector2(368.2522, 167.12228)
+scale = Vector2(0.13388328, 0.14346345)
+texture = ExtResource("29_omkd0")
+
+[node name="Sprite2D12" type="Sprite2D" parent="items"]
+position = Vector2(401, 202)
+scale = Vector2(0.13388328, 0.14346345)
+texture = ExtResource("30_k3kfu")
+
+[node name="Sprite2D13" type="Sprite2D" parent="items"]
+position = Vector2(379, 229.00002)
+rotation = 0.18325958
+scale = Vector2(0.13388328, 0.14346345)
+texture = ExtResource("30_k3kfu")
+
+[node name="Sprite2D14" type="Sprite2D" parent="items"]
+position = Vector2(384, 268.00003)
+rotation = -0.59166664
+scale = Vector2(0.13388328, 0.14346345)
+texture = ExtResource("30_k3kfu")
 
 [node name="Node" parent="." instance=ExtResource("20_8eyhq")]
 
