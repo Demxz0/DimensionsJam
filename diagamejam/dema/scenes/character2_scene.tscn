@@ -1,11 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://bomu3ohbquxci"]
+[gd_scene load_steps=20 format=3 uid="uid://bomu3ohbquxci"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_u2vy7"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_lbeq3"]
 [ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_uawf5"]
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="3_wrtgf"]
 [ext_resource type="Texture2D" uid="uid://ctrfwqfugusxc" path="res://assets/sprites/charbel/BagSuspicious.png" id="4_cui7n"]
-[ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="4_lbeq3"]
 [ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="6_2g4v4"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_rqu26"]
 [ext_resource type="Script" uid="uid://df4ifja1ihb7g" path="res://dema/scripts/next2.gd" id="6_wrtgf"]
@@ -56,18 +55,6 @@ offset_bottom = 743.0
 texture = ExtResource("3_uawf5")
 expand_mode = 1
 
-[node name="Draggable" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("4_lbeq3")]
-position = Vector2(251, 456)
-containment_zone = NodePath("../bag/ColorRect")
-
-[node name="Draggable2" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("4_lbeq3")]
-position = Vector2(413, 461)
-containment_zone = NodePath("../bag/ColorRect")
-
-[node name="Draggable3" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("4_lbeq3")]
-position = Vector2(554, 446)
-containment_zone = NodePath("../bag/ColorRect")
-
 [node name="bag" parent="." instance=ExtResource("3_wrtgf")]
 offset_left = -75.0
 offset_top = 31.0
@@ -94,20 +81,20 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cui7n")
 text = "Next Person"
 script = ExtResource("6_wrtgf")
 
-[node name="Node2D2" parent="." instance=ExtResource("6_2g4v4")]
+[node name="close_button" type="Button" parent="."]
 visible = false
-
-[node name="Node2D3" parent="." instance=ExtResource("7_caswx")]
-visible = false
-
-[node name="Logic" parent="." instance=ExtResource("8_cui7n")]
-visible = false
-position = Vector2(2, -1)
-dialogue_json_path = "res://dema/resources/amina_talk.json"
-
-[node name="Node2D4" parent="." instance=ExtResource("9_spvhf")]
-visible = false
-position = Vector2(-1, 2)
+offset_left = 24.0
+offset_top = 118.0
+offset_right = 237.0
+offset_bottom = 200.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_rqu26")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2g4v4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_caswx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cui7n")
+text = "Close"
 
 [node name="talk" type="Node" parent="."]
 
@@ -217,10 +204,36 @@ text = "View Passport"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="passport_scene" parent="." instance=ExtResource("6_2g4v4")]
+visible = false
+z_index = 1
+
+[node name="dog_scene" parent="." instance=ExtResource("7_caswx")]
+visible = false
+z_index = 1
+
+[node name="Logic" parent="." instance=ExtResource("8_cui7n")]
+visible = false
+z_index = 1
+position = Vector2(2, -1)
+dialogue_json_path = "res://dema/resources/amina_talk.json"
+
+[node name="id_scene" parent="." instance=ExtResource("9_spvhf")]
+visible = false
+z_index = 1
+position = Vector2(-1, 2)
+
 [node name="Node2D5" parent="." instance=ExtResource("13_frjr1")]
 visible = false
+z_index = 1
 
 [connection signal="pressed" from="next person" to="next person" method="_on_pressed"]
+[connection signal="pressed" from="close_button" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="talk/talkButton2" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="dog/DogButton" to="." method="_on_dog_pressed"]
+[connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]
+[connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
 
 [editable path="bag"]
+[editable path="Logic"]
 [editable path="Node2D5"]

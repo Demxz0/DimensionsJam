@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cixnacfr4f65k"]
+[gd_scene load_steps=6 format=3 uid="uid://cixnacfr4f65k"]
 
 [ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/items.gd" id="1_4175t"]
 [ext_resource type="Shader" uid="uid://cae6h168ffd87" path="res://dema/resources/passport.gdshader" id="2_2xbng"]
 [ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="3_n1fq6"]
+[ext_resource type="Script" uid="uid://bhrpg0lca8tup" path="res://dema/scripts/id_back_button.gd" id="4_2xbng"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cw4a8"]
 shader = ExtResource("2_2xbng")
@@ -34,5 +35,6 @@ offset_top = 475.0
 offset_right = 589.0
 offset_bottom = 547.0
 text = "back"
+script = ExtResource("4_2xbng")
 
-[connection signal="pressed" from="Panel/Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]

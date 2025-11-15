@@ -1,11 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2hq3m1ubdq8e"]
+[gd_scene load_steps=10 format=3 uid="uid://b2hq3m1ubdq8e"]
 
+[ext_resource type="Script" uid="uid://c6gmk107cbw1q" path="res://dema/scripts/lose_end.gd" id="1_2gwiu"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="1_ocs4c"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="1_p2hup"]
 [ext_resource type="Texture2D" uid="uid://kgrh1isd0fpg" path="res://assets/sprites/logo.png" id="2_etfec"]
 [ext_resource type="Texture2D" uid="uid://bm0g52bixuceh" path="res://assets/sprites/Police.png" id="2_mucyo"]
+[ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_vgpru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0j62"]
+bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqklg"]
+bg_color = Color(0.61745447, 0.61745495, 0.6174546, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gx6tb"]
+bg_color = Color(0.61745447, 0.61745495, 0.6174546, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_2gwiu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1283.0
@@ -29,3 +53,19 @@ texture = ExtResource("2_mucyo")
 
 [node name="Logic" parent="." instance=ExtResource("1_ocs4c")]
 dialogue_json_path = "res://dema/resources/lose_talk.json"
+
+[node name="backtomainmenu" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 316.0
+offset_bottom = 95.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_vgpru")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_e0j62")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tqklg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gx6tb")
+text = "Back to Main Menu"
+
+[connection signal="pressed" from="backtomainmenu" to="." method="_on_backtomainmenu_pressed"]

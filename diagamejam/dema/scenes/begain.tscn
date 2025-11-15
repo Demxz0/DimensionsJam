@@ -1,11 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0rca05bdec30"]
+[gd_scene load_steps=10 format=3 uid="uid://c0rca05bdec30"]
 
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="1_mme0r"]
+[ext_resource type="Script" uid="uid://d3mrdahhplor6" path="res://dema/scripts/begain.gd" id="1_yl6ui"]
 [ext_resource type="Texture2D" uid="uid://kgrh1isd0fpg" path="res://assets/sprites/logo.png" id="2_mbvcc"]
 [ext_resource type="Texture2D" uid="uid://bm0g52bixuceh" path="res://assets/sprites/Police.png" id="2_x00aw"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="3_mbvcc"]
+[ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="5_mbvcc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yl6ui"]
+bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wb0p"]
+bg_color = Color(0.61745447, 0.61745495, 0.6174546, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ka24"]
+bg_color = Color(0.61745447, 0.61745495, 0.6174546, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_yl6ui")
 
 [node name="bg" type="TextureRect" parent="."]
 offset_right = 1280.0
@@ -29,3 +53,19 @@ texture = ExtResource("2_x00aw")
 
 [node name="Logic" parent="." instance=ExtResource("3_mbvcc")]
 dialogue_json_path = "res://dema/resources/begain_talk.json"
+
+[node name="movetoscene1" type="Button" parent="."]
+offset_left = 11.0
+offset_top = 13.0
+offset_right = 237.0
+offset_bottom = 95.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_mbvcc")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_yl6ui")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7wb0p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4ka24")
+text = "Move to room"
+
+[connection signal="pressed" from="movetoscene1" to="." method="_on_movetoscene_1_pressed"]
