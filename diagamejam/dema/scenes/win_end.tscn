@@ -17,3 +17,4 @@ scale = Vector2(2.734375, 2.546875)
 texture = ExtResource("2_mpftn")
 
 [node name="Logic" parent="." instance=ExtResource("1_pivf5")]
+dialogue_json_path = "res://dema/resources/win_talk.json"

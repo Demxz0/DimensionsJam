@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbcd7ljipurud"]
 
-[ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/passport.gd" id="1_lo0kl"]
+[ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/items.gd" id="1_lo0kl"]
 [ext_resource type="Shader" uid="uid://cae6h168ffd87" path="res://dema/resources/passport.gdshader" id="2_w2upe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cw4a8"]

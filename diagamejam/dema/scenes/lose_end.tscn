@@ -17,3 +17,4 @@ scale = Vector2(3.0859377, 3.0546873)
 texture = ExtResource("2_mucyo")
 
 [node name="Logic" parent="." instance=ExtResource("1_ocs4c")]
+dialogue_json_path = "res://dema/resources/lose_talk.json"

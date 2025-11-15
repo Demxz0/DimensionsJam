@@ -96,9 +96,11 @@ script = ExtResource("6_inpws")
 
 [node name="Node2D2" parent="." instance=ExtResource("6_dvx6k")]
 visible = false
+script = null
 
 [node name="Node2D3" parent="." instance=ExtResource("7_rp4pb")]
 visible = false
+script = null
 
 [node name="Logic" parent="." instance=ExtResource("8_8evrj")]
 visible = false
@@ -108,6 +110,7 @@ dialogue_json_path = "res://dema/resources/ayman_talk.json"
 [node name="Node2D4" parent="." instance=ExtResource("9_xe735")]
 visible = false
 position = Vector2(-1, 2)
+script = null
 
 [node name="Node2D5" parent="." instance=ExtResource("11_uktjn")]
 visible = false
