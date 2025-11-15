@@ -1,110 +1,190 @@
-[gd_scene load_steps=11 format=3 uid="uid://dn60kup6mnc6n"]
+[gd_scene load_steps=20 format=3 uid="uid://dn60kup6mnc6n"]
 
-[ext_resource type="Texture2D" uid="uid://cos0rordupdua" path="res://dema/temp_assets/661d18262589732586d2b05f725f1e3b.jpg" id="1_mbt4i"]
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_nsg31"]
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="2_150ti"]
+[ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_tj6h4"]
+[ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_jdj72"]
 [ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="3_lg531"]
+[ext_resource type="Texture2D" uid="uid://llorim2mmgde" path="res://assets/sprites/amina/AminaBag.png" id="4_ad0d6"]
 [ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="4_nsg31"]
 [ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="5_lg531"]
-[ext_resource type="Texture2D" uid="uid://ck15u5kh7i6bk" path="res://dema/temp_assets/torch.png" id="5_tj6h4"]
+[ext_resource type="Texture2D" uid="uid://crtsgohqv72dm" path="res://assets/sprites/items/olives.png" id="6_jdj72"]
+[ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_x3n0v"]
 [ext_resource type="PackedScene" uid="uid://duhxpgm2ngx3c" path="res://dema/scenes/dog.tscn" id="7_jfsug"]
+[ext_resource type="Texture2D" uid="uid://wlxv8w8pg1cx" path="res://assets/sprites/amina/passportAmina.png" id="7_m6qi0"]
+[ext_resource type="Texture2D" uid="uid://eioiwx4yf0lm" path="res://assets/sprites/dog.png" id="7_x3n0v"]
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="8_p6tpv"]
+[ext_resource type="Texture2D" uid="uid://baaj12r7e3x4m" path="res://assets/sprites/amina/idAmina.png" id="9_3gu2s"]
 [ext_resource type="PackedScene" uid="uid://cixnacfr4f65k" path="res://dema/scenes/id.tscn" id="9_j2r2x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yitul"]
+bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lccn"]
+bg_color = Color(0.61745447, 0.61745495, 0.6174546, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1xge"]
+bg_color = Color(0.61745447, 0.61745495, 0.6174546, 0.7137255)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_nsg31")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="bg" type="TextureRect" parent="."]
 offset_right = 1219.0477
 offset_bottom = 685.71436
 scale = Vector2(1.05, 1.05)
-texture = ExtResource("1_mbt4i")
+texture = ExtResource("2_tj6h4")
+expand_mode = 1
 
-[node name="Node2D" parent="." instance=ExtResource("2_150ti")]
+[node name="base" type="TextureRect" parent="."]
+offset_top = 219.0
+offset_right = 1281.0
+offset_bottom = 743.0
+texture = ExtResource("3_jdj72")
+expand_mode = 1
+
+[node name="bag" parent="." instance=ExtResource("2_150ti")]
 offset_left = -75.0
 offset_top = 31.0
 offset_right = -75.0
 offset_bottom = 31.0
 
-[node name="Draggable" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("3_lg531")]
+[node name="Sprite2D" parent="bag" index="0"]
+position = Vector2(764, 313)
+scale = Vector2(0.34112313, 0.35013658)
+texture = ExtResource("4_ad0d6")
+
+[node name="olives" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("3_lg531")]
 position = Vector2(251, 456)
-texture = ExtResource("5_tj6h4")
-containment_zone = NodePath("../Node2D/ColorRect")
+texture = ExtResource("6_jdj72")
+containment_zone = NodePath("../bag/ColorRect")
 
 [node name="Draggable2" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("3_lg531")]
 position = Vector2(413, 461)
-containment_zone = NodePath("../Node2D/ColorRect")
+containment_zone = NodePath("../bag/ColorRect")
 
 [node name="Draggable3" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("3_lg531")]
 position = Vector2(554, 446)
-containment_zone = NodePath("../Node2D/ColorRect")
+containment_zone = NodePath("../bag/ColorRect")
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1085.0
-offset_top = 91.0
-offset_right = 1221.0
-offset_bottom = 218.0
-texture_normal = ExtResource("4_nsg31")
+[node name="passport" type="Node" parent="."]
 
-[node name="TextureButton2" type="TextureButton" parent="."]
-offset_left = 1091.0
-offset_top = 515.0
-offset_right = 1227.0
-offset_bottom = 643.0
-texture_normal = ExtResource("4_nsg31")
+[node name="passportButton" type="TextureButton" parent="passport"]
+offset_left = 1070.0
+offset_top = 459.0
+offset_right = 1272.0
+offset_bottom = 706.2239
+texture_normal = ExtResource("7_m6qi0")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="TextureButton3" type="TextureButton" parent="."]
-offset_left = 1088.0
-offset_top = 305.0
-offset_right = 1224.0
-offset_bottom = 433.0
-texture_normal = ExtResource("4_nsg31")
-
-[node name="TextureButton4" type="TextureButton" parent="."]
-offset_left = 918.0
-offset_top = 88.0
-offset_right = 1054.0
-offset_bottom = 216.0
-texture_normal = ExtResource("4_nsg31")
-
-[node name="Label" type="Label" parent="."]
+[node name="passport" type="Label" parent="passport"]
 offset_left = 1086.0
-offset_top = 38.0
-offset_right = 1213.0
-offset_bottom = 80.0
+offset_top = 431.0
+offset_right = 1250.0
+offset_bottom = 473.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_x3n0v")
 theme_override_font_sizes/font_size = 30
-text = "passport"
+text = "View Passport"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 1128.0
-offset_top = 465.0
-offset_right = 1182.0
-offset_bottom = 507.0
-theme_override_font_sizes/font_size = 30
-text = "dog"
+[node name="id" type="Node" parent="."]
 
-[node name="Label3" type="Label" parent="."]
-offset_left = 1123.0
-offset_top = 250.0
-offset_right = 1178.0
-offset_bottom = 292.0
-theme_override_font_sizes/font_size = 30
-text = "talk"
+[node name="idButton" type="TextureButton" parent="id"]
+offset_left = 889.0
+offset_top = 558.0
+offset_right = 1073.4426
+offset_bottom = 701.0
+texture_normal = ExtResource("9_3gu2s")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Label4" type="Label" parent="."]
-offset_left = 966.0
-offset_top = 35.0
+[node name="id" type="Label" parent="id"]
+offset_left = 931.0
+offset_top = 524.0
 offset_right = 1021.0
-offset_bottom = 77.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_x3n0v")
 theme_override_font_sizes/font_size = 30
-text = "id"
+text = "View ID"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="dog" type="Node" parent="."]
+
+[node name="DogButton" type="TextureButton" parent="dog"]
+offset_left = 1096.0
+offset_top = -9.0
+offset_right = 1276.0
+offset_bottom = 238.12701
+texture_normal = ExtResource("7_x3n0v")
+texture_pressed = ExtResource("7_x3n0v")
+texture_hover = ExtResource("7_x3n0v")
+texture_focused = ExtResource("7_x3n0v")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="dog" type="Label" parent="dog"]
+offset_left = 1139.0
+offset_top = 243.0
+offset_right = 1232.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_x3n0v")
+theme_override_font_sizes/font_size = 30
+text = "Use Dog"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="talk" type="Node" parent="."]
+
+[node name="talkButton" type="TextureButton" parent="talk"]
+offset_left = 890.0
+offset_top = 55.0
+offset_right = 1026.0
+offset_bottom = 183.0
+texture_normal = ExtResource("4_nsg31")
+
+[node name="talk" type="Label" parent="talk"]
+offset_left = 880.0
+offset_top = 232.0
+offset_right = 1055.0
+offset_bottom = 274.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_x3n0v")
+theme_override_font_sizes/font_size = 30
+text = "Talk to suspect"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="next person" type="Button" parent="."]
 offset_left = 24.0
 offset_top = 13.0
 offset_right = 237.0
 offset_bottom = 95.0
-text = "next person"
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_x3n0v")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_yitul")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2lccn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x1xge")
+text = "Next Person"
 
 [node name="Node2D2" parent="." instance=ExtResource("5_lg531")]
 visible = false
@@ -129,11 +209,11 @@ offset_right = 239.0
 offset_bottom = 192.0
 text = "close"
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_passport_pressed"]
-[connection signal="pressed" from="TextureButton2" to="." method="_on_dog_pressed"]
-[connection signal="pressed" from="TextureButton3" to="." method="_on_talk_pressed"]
-[connection signal="pressed" from="TextureButton4" to="." method="_on_id_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_next1_pressed"]
+[connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
+[connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]
+[connection signal="pressed" from="dog/DogButton" to="." method="_on_dog_pressed"]
+[connection signal="pressed" from="talk/talkButton" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="next person" to="." method="_on_next1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_close_pressed"]
 
-[editable path="Node2D"]
+[editable path="bag"]
