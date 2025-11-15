@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://bw04a41patjmh"]
 
-[ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/passport.gd" id="1_leo7n"]
 [ext_resource type="Shader" uid="uid://cae6h168ffd87" path="res://dema/resources/passport.gdshader" id="2_uvsud"]
 [ext_resource type="Texture2D" uid="uid://kgrh1isd0fpg" path="res://assets/sprites/logo.png" id="3_ufvji"]
 [ext_resource type="Texture2D" uid="uid://baaj12r7e3x4m" path="res://assets/sprites/amina/idAmina.png" id="4_leo7n"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="5_hpiqp"]
+[ext_resource type="Script" uid="uid://b5gjpt2bpg8yo" path="res://dema/scripts/button1.gd" id="6_uvsud"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cw4a8"]
 shader = ExtResource("2_uvsud")
@@ -39,7 +39,6 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_leo7n")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_cw4a8")
@@ -82,5 +81,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5xvr3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1wmmp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_r0ts1")
 text = "Back"
-
-[connection signal="pressed" from="Panel/Button" to="." method="_on_back_button_pressed"]
+script = ExtResource("6_uvsud")

@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://be063dlo22ukg"]
+[gd_scene load_steps=5 format=3 uid="uid://be063dlo22ukg"]
 
-[ext_resource type="Script" uid="uid://by8j1hmpn3fsa" path="res://dema/scripts/items.gd" id="1_bk2im"]
 [ext_resource type="Shader" uid="uid://cae6h168ffd87" path="res://dema/resources/passport.gdshader" id="1_pgms4"]
 [ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="2_bk2im"]
 [ext_resource type="Script" uid="uid://mpxrmk1i6vxk" path="res://dema/scripts/pass_back_button.gd" id="4_cw4a8"]
@@ -10,7 +9,6 @@ shader = ExtResource("1_pgms4")
 shader_parameter/lod = 1.0550000501125
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_bk2im")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_cw4a8")

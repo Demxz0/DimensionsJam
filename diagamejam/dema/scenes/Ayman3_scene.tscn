@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dflsmu7fpluse"]
+[gd_scene load_steps=25 format=3 uid="uid://dflsmu7fpluse"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_8nv1r"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_swvbl"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bkkoxksmj50sn" path="res://dema/scenes/passportAyman.tscn" id="18_wvu3b"]
 [ext_resource type="PackedScene" uid="uid://3dgguex8arq4" path="res://dema/scenes/idAyman.tscn" id="19_cyujh"]
 [ext_resource type="PackedScene" uid="uid://bjj7qdx7osdpd" path="res://dema/scenes/dogSafe.tscn" id="20_b4uu3"]
+[ext_resource type="PackedScene" uid="uid://glkoar0isd2l" path="res://dema/scenes/back_button_logic.tscn" id="21_cyujh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8evrj"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -235,6 +236,8 @@ z_index = 1
 [node name="Node2D3" parent="." instance=ExtResource("20_b4uu3")]
 visible = false
 z_index = 1
+
+[node name="Node" parent="." instance=ExtResource("21_cyujh")]
 
 [connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
 [connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]

@@ -15,6 +15,10 @@ run/main_scene="uid://c0rca05bdec30"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+BackButtonLogic="*res://dema/scripts/back_button_logic.gd"
+
 [display]
 
 window/size/viewport_width=1280
