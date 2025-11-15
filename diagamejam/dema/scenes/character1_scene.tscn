@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dcf282g0uuw3h" path="res://assets/sprites/ConveyorBelt.png" id="3_jdj72"]
 [ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="3_lg531"]
 [ext_resource type="Texture2D" uid="uid://llorim2mmgde" path="res://assets/sprites/amina/AminaBag.png" id="4_ad0d6"]
-[ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="4_nsg31"]
 [ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="5_lg531"]
 [ext_resource type="Texture2D" uid="uid://crtsgohqv72dm" path="res://assets/sprites/items/olives.png" id="6_jdj72"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_x3n0v"]
@@ -16,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="8_p6tpv"]
 [ext_resource type="Texture2D" uid="uid://baaj12r7e3x4m" path="res://assets/sprites/amina/idAmina.png" id="9_3gu2s"]
 [ext_resource type="PackedScene" uid="uid://cixnacfr4f65k" path="res://dema/scenes/id.tscn" id="9_j2r2x"]
+[ext_resource type="Texture2D" uid="uid://behuvaj3qumba" path="res://assets/sprites/Message_20220327175432.png" id="12_jdj72"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yitul"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -87,6 +87,10 @@ offset_top = 459.0
 offset_right = 1272.0
 offset_bottom = 706.2239
 texture_normal = ExtResource("7_m6qi0")
+texture_pressed = ExtResource("7_m6qi0")
+texture_hover = ExtResource("7_m6qi0")
+texture_disabled = ExtResource("7_m6qi0")
+texture_focused = ExtResource("7_m6qi0")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -110,6 +114,10 @@ offset_top = 558.0
 offset_right = 1073.4426
 offset_bottom = 701.0
 texture_normal = ExtResource("9_3gu2s")
+texture_pressed = ExtResource("9_3gu2s")
+texture_hover = ExtResource("9_3gu2s")
+texture_disabled = ExtResource("9_3gu2s")
+texture_focused = ExtResource("9_3gu2s")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -135,6 +143,7 @@ offset_bottom = 238.12701
 texture_normal = ExtResource("7_x3n0v")
 texture_pressed = ExtResource("7_x3n0v")
 texture_hover = ExtResource("7_x3n0v")
+texture_disabled = ExtResource("7_x3n0v")
 texture_focused = ExtResource("7_x3n0v")
 ignore_texture_size = true
 stretch_mode = 0
@@ -154,17 +163,23 @@ vertical_alignment = 1
 [node name="talk" type="Node" parent="."]
 
 [node name="talkButton" type="TextureButton" parent="talk"]
-offset_left = 890.0
-offset_top = 55.0
-offset_right = 1026.0
-offset_bottom = 183.0
-texture_normal = ExtResource("4_nsg31")
+offset_left = 868.0
+offset_top = 60.0
+offset_right = 1062.0
+offset_bottom = 254.0
+texture_normal = ExtResource("12_jdj72")
+texture_pressed = ExtResource("12_jdj72")
+texture_hover = ExtResource("12_jdj72")
+texture_disabled = ExtResource("12_jdj72")
+texture_focused = ExtResource("12_jdj72")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="talk" type="Label" parent="talk"]
 offset_left = 880.0
-offset_top = 232.0
+offset_top = 241.0
 offset_right = 1055.0
-offset_bottom = 274.0
+offset_bottom = 283.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_x3n0v")
 theme_override_font_sizes/font_size = 30

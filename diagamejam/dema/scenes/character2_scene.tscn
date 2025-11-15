@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="3_wrtgf"]
 [ext_resource type="Texture2D" uid="uid://ctrfwqfugusxc" path="res://assets/sprites/charbel/BagSuspicious.png" id="4_cui7n"]
 [ext_resource type="PackedScene" uid="uid://bn2j0j0yxor8o" path="res://dema/draggable/scene/draggable.tscn" id="4_lbeq3"]
-[ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="5_rqu26"]
 [ext_resource type="PackedScene" uid="uid://be063dlo22ukg" path="res://dema/scenes/passport.tscn" id="6_2g4v4"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="6_rqu26"]
 [ext_resource type="Script" uid="uid://df4ifja1ihb7g" path="res://dema/scripts/next2.gd" id="6_wrtgf"]
@@ -15,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cixnacfr4f65k" path="res://dema/scenes/id.tscn" id="9_spvhf"]
 [ext_resource type="Texture2D" uid="uid://eioiwx4yf0lm" path="res://assets/sprites/dog.png" id="12_rqu26"]
 [ext_resource type="Texture2D" uid="uid://bce45u8bxakbl" path="res://assets/sprites/charbel/idCharbel.png" id="13_caswx"]
+[ext_resource type="Texture2D" uid="uid://behuvaj3qumba" path="res://assets/sprites/Message_20220327175432.png" id="13_uawf5"]
 [ext_resource type="Texture2D" uid="uid://dgq3uwqyhykq8" path="res://assets/sprites/charbel/passportCharbel.png" id="14_cui7n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g4v4"]
@@ -110,13 +110,6 @@ position = Vector2(-1, 2)
 
 [node name="talk" type="Node" parent="."]
 
-[node name="talkButton" type="TextureButton" parent="talk"]
-offset_left = 890.0
-offset_top = 55.0
-offset_right = 1026.0
-offset_bottom = 183.0
-texture_normal = ExtResource("5_rqu26")
-
 [node name="talk2" type="Label" parent="talk"]
 offset_left = 880.0
 offset_top = 232.0
@@ -129,6 +122,19 @@ text = "Talk to suspect"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="talkButton2" type="TextureButton" parent="talk"]
+offset_left = 868.0
+offset_top = 60.0
+offset_right = 1062.0
+offset_bottom = 254.0
+texture_normal = ExtResource("13_uawf5")
+texture_pressed = ExtResource("13_uawf5")
+texture_hover = ExtResource("13_uawf5")
+texture_disabled = ExtResource("13_uawf5")
+texture_focused = ExtResource("13_uawf5")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="dog" type="Node" parent="."]
 
 [node name="DogButton" type="TextureButton" parent="dog"]
@@ -139,6 +145,7 @@ offset_bottom = 238.12701
 texture_normal = ExtResource("12_rqu26")
 texture_pressed = ExtResource("12_rqu26")
 texture_hover = ExtResource("12_rqu26")
+texture_disabled = ExtResource("12_rqu26")
 texture_focused = ExtResource("12_rqu26")
 ignore_texture_size = true
 stretch_mode = 0
@@ -163,6 +170,10 @@ offset_top = 558.0
 offset_right = 1073.4426
 offset_bottom = 701.0
 texture_normal = ExtResource("13_caswx")
+texture_pressed = ExtResource("13_caswx")
+texture_hover = ExtResource("13_caswx")
+texture_disabled = ExtResource("13_caswx")
+texture_focused = ExtResource("13_caswx")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -186,6 +197,10 @@ offset_top = 459.0
 offset_right = 1272.0
 offset_bottom = 706.2239
 texture_normal = ExtResource("14_cui7n")
+texture_pressed = ExtResource("14_cui7n")
+texture_hover = ExtResource("14_cui7n")
+texture_disabled = ExtResource("14_cui7n")
+texture_focused = ExtResource("14_cui7n")
 ignore_texture_size = true
 stretch_mode = 0
 
