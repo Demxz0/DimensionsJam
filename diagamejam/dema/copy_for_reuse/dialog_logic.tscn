@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://clujobpgkrdjm"]
 
 [ext_resource type="Script" uid="uid://8l0r3t10lliw" path="res://dema/copy_for_reuse/dialog_logic.gd" id="1_ppbmj"]
-[ext_resource type="Texture2D" uid="uid://d2n5o16hsyoe0" path="res://dema/copy_for_reuse/assets/sprites/dialog_box.png" id="2_777q1"]
+[ext_resource type="Texture2D" uid="uid://0clypflt5llx" path="res://assets/sprites/Dialogue.png" id="2_7idpl"]
 [ext_resource type="FontFile" uid="uid://cgvu7h3iy1arp" path="res://assets/fonts/Crunchyfont.otf" id="3_7idpl"]
 [ext_resource type="Script" uid="uid://cts5534yqv3d7" path="res://dema/copy_for_reuse/dialog_box.gd" id="3_yey3j"]
 
@@ -39,14 +39,14 @@ script = ExtResource("1_ppbmj")
 [node name="Dialog" type="Sprite2D" parent="."]
 position = Vector2(646, 411)
 scale = Vector2(0.24, 0.24)
-texture = ExtResource("2_777q1")
+texture = ExtResource("2_7idpl")
 
 [node name="Name" type="Label" parent="Dialog"]
 offset_left = -1875.0
 offset_top = 320.8335
 offset_right = -1283.3333
-offset_bottom = 468.8335
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+offset_bottom = 468.83347
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_constants/line_spacing = 1
 theme_override_fonts/font = ExtResource("3_7idpl")
@@ -60,7 +60,7 @@ offset_left = -1837.5
 offset_top = 604.1666
 offset_right = 1837.5
 offset_bottom = 1091.6666
-theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_7idpl")
 theme_override_font_sizes/normal_font_size = 150
 bbcode_enabled = true
