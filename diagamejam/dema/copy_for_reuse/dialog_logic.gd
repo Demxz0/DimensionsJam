@@ -93,7 +93,3 @@ func display_line():
 	
 	# This is the only line that runs at the end now:
 	dialogue_box_parent.hide()
-
-
-func _on_close_pressed() -> void:
-	$".".visible = false

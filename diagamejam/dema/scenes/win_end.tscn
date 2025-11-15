@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpjib1asp4l5i"]
+
+[ext_resource type="Texture2D" uid="uid://cos0rordupdua" path="res://dema/temp_assets/661d18262589732586d2b05f725f1e3b.jpg" id="1_ky463"]
+[ext_resource type="PackedScene" uid="uid://clujobpgkrdjm" path="res://dema/copy_for_reuse/dialog_logic.tscn" id="1_pivf5"]
+[ext_resource type="Texture2D" uid="uid://de1fxmvvxk681" path="res://icon.svg" id="2_mpftn"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1283.0
+offset_bottom = 722.0
+texture = ExtResource("1_ky463")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(654, 322)
+scale = Vector2(2.734375, 2.546875)
+texture = ExtResource("2_mpftn")
+
+[node name="Logic" parent="." instance=ExtResource("1_pivf5")]
