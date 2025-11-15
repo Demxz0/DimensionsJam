@@ -1,0 +1,26 @@
+[
+	{
+		"speaker": "Officer",
+		"text": "Welcome to your new job!"
+	},
+	{
+		"speaker": "Officer",
+		"text": "This is going to be your probationary period which We will make us determine whether you deserve this job or not."
+	},
+	{
+		"speaker": "Officer",
+		"text": "Your job is very easy; you just have to check on people suspected of smuggling contraband."
+	},
+	{
+		"speaker": "Officer",
+		"text": "You should check each person`s passport, ID, the smell of the bag, and its contents. Be aware if the bag contains a lot of food."
+	},
+    {
+		"speaker": "Officer",
+		"text": "After verifying all the suspects and speaking with them, you should report the person carrying the prohibited items."
+	},
+    {
+		"speaker": "Officer",
+		"text": "If we discover that you reported an innocent person, you will be dismissed from this job. otherwise, you`ll continue with us."
+	}
+]

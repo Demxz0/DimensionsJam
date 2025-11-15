@@ -1,0 +1,26 @@
+[
+	{
+		"speaker": "Officer",
+		"text": "The smuggler has escaped and is now flying away, and all thanks to you!!!"
+	},
+	{
+		"speaker": "Officer",
+		"text": "I told you to pay attention to the food, but not all foods are suspicious, especially if they are for the elderly."
+	},
+	{
+		"speaker": "Officer",
+		"text": "Also, IDs and passports may contain incorrect information."
+	},
+	{
+		"speaker": "Officer",
+		"text": "But this is a secondary matter that may raise suspicion. What matters to us is only whether he is carrying prohibited items or not."
+	},
+    {
+		"speaker": "Officer",
+		"text": "Anyway, I'm sorry to tell you this, but you won't be continuing with us in this job."
+	},
+    {
+		"speaker": "Officer",
+		"text": "I wish you a happy life."
+	}
+]
