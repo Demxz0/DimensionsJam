@@ -1,7 +1,7 @@
 extends Node2D 
 
-@onready var option_button = $"../Node2D5/CheckBox3"
-@onready var report_button = $"../Node2D5/Button"
+@onready var option_button = $"../Node2D5/choice"
+@onready var report_button = $"../Node2D5/report"
 
 func _ready():
 

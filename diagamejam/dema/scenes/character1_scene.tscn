@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dn60kup6mnc6n"]
+[gd_scene load_steps=21 format=3 uid="uid://dn60kup6mnc6n"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_nsg31"]
 [ext_resource type="PackedScene" uid="uid://bnvpb7aj22yyf" path="res://dema/scenes/bag.tscn" id="2_150ti"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://baaj12r7e3x4m" path="res://assets/sprites/amina/idAmina.png" id="9_3gu2s"]
 [ext_resource type="PackedScene" uid="uid://cixnacfr4f65k" path="res://dema/scenes/id.tscn" id="9_j2r2x"]
 [ext_resource type="Texture2D" uid="uid://behuvaj3qumba" path="res://assets/sprites/Message_20220327175432.png" id="12_jdj72"]
+[ext_resource type="PackedScene" uid="uid://cbcd7ljipurud" path="res://dema/scenes/report.tscn" id="17_m6qi0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yitul"]
 bg_color = Color(0.43137255, 0.43137255, 0.43137255, 0.7137255)
@@ -223,6 +224,9 @@ offset_top = 114.0
 offset_right = 239.0
 offset_bottom = 192.0
 text = "close"
+
+[node name="Node2D5" parent="." instance=ExtResource("17_m6qi0")]
+visible = false
 
 [connection signal="pressed" from="passport/passportButton" to="." method="_on_passport_pressed"]
 [connection signal="pressed" from="id/idButton" to="." method="_on_id_pressed"]

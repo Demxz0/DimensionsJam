@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bomu3ohbquxci"]
+[gd_scene load_steps=21 format=3 uid="uid://bomu3ohbquxci"]
 
 [ext_resource type="Script" uid="uid://8p6k7joantw0" path="res://dema/scripts/game_scene.gd" id="1_u2vy7"]
 [ext_resource type="Texture2D" uid="uid://s5s4u3s31ygp" path="res://assets/sprites/Floor.png" id="2_lbeq3"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cixnacfr4f65k" path="res://dema/scenes/id.tscn" id="9_spvhf"]
 [ext_resource type="Texture2D" uid="uid://eioiwx4yf0lm" path="res://assets/sprites/dog.png" id="12_rqu26"]
 [ext_resource type="Texture2D" uid="uid://bce45u8bxakbl" path="res://assets/sprites/charbel/idCharbel.png" id="13_caswx"]
+[ext_resource type="PackedScene" uid="uid://cbcd7ljipurud" path="res://dema/scenes/report.tscn" id="13_frjr1"]
 [ext_resource type="Texture2D" uid="uid://behuvaj3qumba" path="res://assets/sprites/Message_20220327175432.png" id="13_uawf5"]
 [ext_resource type="Texture2D" uid="uid://dgq3uwqyhykq8" path="res://assets/sprites/charbel/passportCharbel.png" id="14_cui7n"]
 
@@ -55,17 +56,6 @@ offset_bottom = 743.0
 texture = ExtResource("3_uawf5")
 expand_mode = 1
 
-[node name="bag" parent="." instance=ExtResource("3_wrtgf")]
-offset_left = -75.0
-offset_top = 31.0
-offset_right = -75.0
-offset_bottom = 31.0
-
-[node name="Sprite2D" parent="bag" index="0"]
-position = Vector2(727.8662, 314.8926)
-scale = Vector2(0.3455974, 0.35472903)
-texture = ExtResource("4_cui7n")
-
 [node name="Draggable" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("4_lbeq3")]
 position = Vector2(251, 456)
 containment_zone = NodePath("../bag/ColorRect")
@@ -77,6 +67,17 @@ containment_zone = NodePath("../bag/ColorRect")
 [node name="Draggable3" parent="." node_paths=PackedStringArray("containment_zone") instance=ExtResource("4_lbeq3")]
 position = Vector2(554, 446)
 containment_zone = NodePath("../bag/ColorRect")
+
+[node name="bag" parent="." instance=ExtResource("3_wrtgf")]
+offset_left = -75.0
+offset_top = 31.0
+offset_right = -75.0
+offset_bottom = 31.0
+
+[node name="Sprite2D" parent="bag" index="0"]
+position = Vector2(727.8662, 314.8926)
+scale = Vector2(0.3455974, 0.35472903)
+texture = ExtResource("4_cui7n")
 
 [node name="next person" type="Button" parent="."]
 offset_left = 24.0
@@ -216,6 +217,10 @@ text = "View Passport"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Node2D5" parent="." instance=ExtResource("13_frjr1")]
+visible = false
+
 [connection signal="pressed" from="next person" to="next person" method="_on_pressed"]
 
 [editable path="bag"]
+[editable path="Node2D5"]
